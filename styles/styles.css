@@ -1,0 +1,307 @@
+:root {
+  --main-font: "Lato", sans-serif;
+  
+  --white: #ffffff;
+  --gray-200: #f4f5f7;
+  --gray-600: #9a9ca5;
+  --gray-700: #787a80;
+  --gray-800: #424551;
+  --gray-900: #1e212c;
+  --black: #000000;
+
+  --primary-color: #ff3f3a;
+
+  --section-gradient: linear-gradient(55.95deg, rgba(255, 63, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%);
+  --btn-gradient: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Lato-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Lato-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Lato-Black.woff") format("woff");
+  font-display: swap;
+}
+
+/************************************************************************************************
+
+                                  Global styles
+
+************************************************************************************************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 0;
+  margin: 0 auto;
+
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25.6px;
+  color: var(--gray-800);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 40px;
+  text-decoration: none;
+  border: none;
+  background: none;
+}
+
+.filled-btn {
+  background: var(--btn-gradient);
+  color: var(--white);
+  line-height: 52px;
+  border-radius: 4px;
+}
+
+.unfilled-btn {
+  background: none;
+  background-color: transparent;
+  line-height: 52px;
+  border-radius: 4px;
+  outline: solid 1px var(--primary-color);
+  color: var(--gray-800);
+}
+
+.unfilled-btn:hover {
+  background: var(--btn-gradient);
+  color: var(--white);
+  line-height: 52px;
+  border-radius: 4px;
+}
+
+/************************************************************************************************
+
+                                  Header styles
+
+************************************************************************************************/
+
+.page-header {
+  display: grid;
+  align-items: center;
+  padding: 35px 40px;
+
+  background: var(--section-gradient);
+}
+
+.createx-logo {
+  display: inline-block;
+  max-height: 22px;
+}
+
+.header-logo {
+  margin-right: 60px;
+}
+
+.header-navigation {
+  display: flex;
+  margin: auto;
+  margin-bottom: 130px;
+  width: 1230px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-navigation-list {
+  display: flex;
+  width: 432px;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  margin-right: auto;
+  align-items: center;
+  list-style-type: none;
+}
+
+.header-navigation-link {
+  font-weight: 700;
+  color: var(--gray-800);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header-navigation-link:hover {
+  opacity: 0.8;
+}
+
+.user-links-wrapper {
+  display: flex;
+  width: 386px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-entry {
+  display: grid;
+  grid-template-rows: 84px 320px auto auto;
+  grid-template-areas: "play image"
+                       "title image"
+                       "buttons image"
+                       "statistics statistics";
+  width: 1230px;
+  margin: 0 auto;
+}
+
+.play-btn-wrapper {
+  display: flex;
+  margin-bottom: 40px;
+  max-height: 84px;
+  align-items: center;
+  grid-area: play;
+}
+
+.play-btn {
+  display: block;
+  margin-right: 16px;
+  padding: 0;
+  width: 52px;
+  height: 52px;
+  background-image: url("../images/play-btn-triangle.svg");
+  background-size: 16px 16px;
+  background-position: 55% 50%;
+  background-repeat: no-repeat;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.play-btn:hover {
+  outline: solid 16px rgba(255, 63, 58, 0.12);
+}
+
+.play-btn-text {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.entry-title {
+  display: block;
+  margin: 0;
+  max-width: 500px;
+  color: var(--gray-900);
+  font-size: 64px;
+  line-height: 83.2px;
+  grid-area: title;
+}
+
+.buttons-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 240px;
+  width: 373px;
+  justify-content: space-between;
+  grid-area: buttons;
+  list-style-type: none;
+  white-space: nowrap;
+}
+
+.image-wrapper {
+  grid-area: image;
+}
+
+.statistics-list {
+  display: flex;
+  width: 1230px;
+  justify-content: space-between;
+  list-style-type: none;
+  grid-area: statistics;
+}
+
+.statistics-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.statistics-item:not(:last-of-type)::after {
+  position: absolute;
+  left: 100%;
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin-left: 25%;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+
+  content: "";
+}
+
+.statistics-number {
+  margin-right: 12px;
+  color: var(--gray-900);
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 60px;
+}
+
+/************************************************************************************************
+
+                                  Main styles
+
+************************************************************************************************/
+
+.page-main {
+  padding: 0 40px;
+  flex-grow: 1;
+}
+
+
+/************************************************************************************************
+
+                                  Footer styles
+
+************************************************************************************************/
+
+.footer-container {
+  display: flex;
+  padding: 80px 40px 60px;
+}
