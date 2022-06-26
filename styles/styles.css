@@ -116,6 +116,31 @@ body {
   border-radius: 4px;
 }
 
+.section {
+  max-width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pretitle {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.section-title {
+  padding: 0;
+  margin: 0;
+  font-size: 46px;
+  line-height: 60px;
+  font-weight: 900;
+
+  white-space: nowrap;
+}
+
 /************************************************************************************************
 
                                   Header styles
@@ -141,6 +166,7 @@ body {
 
 .header-navigation {
   display: flex;
+  flex-wrap: wrap;
   margin: auto;
   margin-bottom: 130px;
   width: 1230px;
@@ -150,6 +176,7 @@ body {
 
 .header-navigation-list {
   display: flex;
+  flex-wrap: wrap;
   width: 432px;
   justify-content: space-between;
   padding: 0;
@@ -172,6 +199,7 @@ body {
 
 .user-links-wrapper {
   display: flex;
+  flex-wrap: wrap;
   width: 386px;
   align-items: center;
   justify-content: space-between;
@@ -292,6 +320,95 @@ body {
 .page-main {
   padding: 0 40px;
   flex-grow: 1;
+}
+
+/********************************     Advantages-section      ********************************/
+
+.section-advantages {
+  display: grid;
+  margin: 180px auto;
+  padding: 0;
+  gap: 135px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "image section-content"
+                       "image section-content"
+                       "image section-content"
+                       "image section-content";
+}
+
+.image-wrapper {
+  grid-area: image;
+}
+
+.content-container {
+  display: grid;
+  padding: 0;
+  margin: 0;
+  grid-area: section-content;
+  grid-template-areas: "pretitle"
+                       "title"
+                       "advantages"
+                       "button";
+}
+
+.section-title {
+  grid-area: title;
+}
+
+.pretitle {
+  grid-area: pretitle;
+}
+
+.advantages-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  max-width: 390px;
+  margin-top: 40px;
+  margin-bottom: 48px;
+  list-style-type: none;
+  grid-area: advantages;
+}
+
+.advantages-item {
+  display: grid;
+  grid-template-columns: 16px auto;
+  gap: 16px;
+  min-width: 240px;
+
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+
+}
+
+.advantages-item::before {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  padding-top: 25px;
+  margin: 0;
+  background-image: url("../images/check-icon.svg");
+  background-size: 16px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  content: "";
+}
+
+.section-advantages .button {
+  max-width: fit-content;
+  max-height: 44px;
+  grid-area: button;
+  line-height: 44px;
+  padding: 0 32px;
+}
+
+/********************************     Courses-section      ********************************/
+
+.section-courses {
 }
 
 
