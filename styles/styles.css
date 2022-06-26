@@ -122,10 +122,13 @@ body {
 }
 
 .section {
+  padding-bottom: 180px;
+}
+
+.section-container {
   max-width: 1230px;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 180px;
 }
 
 .pretitle {
@@ -324,22 +327,21 @@ body {
 ************************************************************************************************/
 
 .page-main {
-  padding: 0 40px;
+  padding: 0;
   flex-grow: 1;
 }
 
 /********************************     Advantages-section      ********************************/
 
 .section-advantages {
+  padding: 180px;
+}
+
+.section-advantages .section-container {
   display: grid;
-  margin: 180px auto;
-  padding: 0;
   gap: 135px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "image section-content"
-                       "image section-content"
-                       "image section-content"
-                       "image section-content";
+  grid-template-areas: "image section-content";
+  justify-content: space-between;
 }
 
 .image-wrapper {
@@ -544,7 +546,7 @@ body {
 
 /********************************     Benefits-section      ********************************/
 
-.section-benefits {
+.section-benefits .section-container {
   display: grid;
   grid-template-areas: "pretitle"
                        "title"
@@ -608,6 +610,103 @@ body {
 }
 
 
+/********************************     Events-section      ********************************/
+
+.section-events {
+  background: var(--section-gradient);
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+
+.section-events .section-container {
+  display: grid;
+  grid-template-areas: "pretitle"
+                       "title"
+                       "events"
+                       "button";
+}
+
+.section-events .pretitle,
+.section-events .section-title {
+  text-align: center;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 60px auto;
+}
+
+.events-card {
+  display: grid;
+  grid-template-columns: 70px 140px auto 140px;
+  width: 1230px;
+  margin-bottom: 24px;
+  padding: 32px 40px;
+  background-color: var(--white);
+  border-radius: 4px;
+}
+
+.event-day {
+  margin: 0;
+  margin-right: 20px;
+  padding: 0;
+  max-width: 60px;
+  font-size: 48px;
+  line-height: 62.4px;
+  font-weight: 900;
+  color: var(--primary-color);
+}
+
+.event-date-wrapper {
+  display: flex;
+  margin-right: 42px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.event-month {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.event-time {
+  color: var(--gray-700);
+}
+
+.events-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  margin: auto;
+}
+
+.events-card .button {
+  padding: 0 32px;
+}
+
+.event-name {
+  margin: 0;
+  padding: 0;
+
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.events-more-title {
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
 
 /************************************************************************************************
 
