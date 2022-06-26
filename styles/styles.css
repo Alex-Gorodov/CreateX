@@ -92,8 +92,10 @@ body {
   padding: 0 40px;
   font-weight: 700;
   text-decoration: none;
+  white-space: nowrap;
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 .filled-btn {
@@ -557,7 +559,7 @@ body {
 
 .benefits-buttons-list {
   display: flex;
-  max-width: 1230px;
+  width: 1230px;
   max-height: 46px;
   padding: 0;
   margin: 60px auto;
@@ -565,10 +567,46 @@ body {
   justify-content: space-between;
 }
 
+.benefits-buttons-item .button {
+  display: flex;
+  align-items: center;
+}
+
+.benefits-buttons-item svg {
+  margin-right: 8px;
+}
+
 .inactive-benefits-btn {
   outline: none;
   color: var(--gray-600);
 }
+
+.benefits-item-wrapper {
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-areas: "text image"
+                       "text image";
+}
+
+.benefits-item-wrapper .subtitle {
+  padding: 0;
+  margin: 0;
+  grid-area: subtitle;
+}
+
+.benefit-text {
+  max-width: 495px;
+  grid-area: text;
+}
+
+.subtitle {
+  font-size: 32px;
+  line-height: 41.6px;
+  font-weight: 900;
+  color: var(--gray-900);
+}
+
 
 
 /************************************************************************************************
