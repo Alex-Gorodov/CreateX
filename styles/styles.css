@@ -1071,6 +1071,7 @@ body {
   height: 3px;
   border: none;
   background-color: var(--gray-500);
+  cursor: pointer;
 }
 
 .pagination-item:not(:last-of-type) .pagination-btn {
@@ -1307,6 +1308,10 @@ body {
                                   Footer styles
 
 ************************************************************************************************/
+
+.page-footer {
+  background-color: var(--gray-900);
+}
 
 .footer-container {
   display: flex;
