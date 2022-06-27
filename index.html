@@ -429,16 +429,23 @@
       <div class="section-container">
         <h3 class="title section-title">What our students say</h3>
         <h6 class="pretitle">Testimonials</h6>
-        <div class="slider-buttons-wrapper">
-          <button class="slider-btn" type="button">
-            <span class="visually-hidden">Next</span>
-          </button>
-          <button class="slider-btn" type="button">
-            <span class="visually-hidden">Previous</span>
-          </button>
-        </div>
+        
         <ul class="reviews-slider">
-          <li class="review-item">
+          <li class="slider-buttons-wrapper">
+            <button class="slider-btn" type="button">
+              <svg width="19" height="12" viewBox="0 0 19 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2032 11.2071C6.81268 11.5976 6.17951 11.5976 5.78899 11.2071L1.28899 6.70711C0.898462 6.31658 0.898462 5.68342 1.28899 5.29289L5.78899 0.792893C6.17951 0.402369 6.81268 0.402369 7.2032 0.792893C7.59373 1.18342 7.59373 1.81658 7.2032 2.20711L4.41031 5L17.9961 5C18.5484 5 18.9961 5.44772 18.9961 6C18.9961 6.55228 18.5484 7 17.9961 7L4.41031 7L7.2032 9.79289C7.59373 10.1834 7.59373 10.8166 7.2032 11.2071Z"/>
+              </svg>
+              <span class="visually-hidden">Next</span>
+            </button>
+            <button class="slider-btn" type="button">
+              <svg width="19" height="12" viewBox="0 0 19 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2032 11.2071C6.81268 11.5976 6.17951 11.5976 5.78899 11.2071L1.28899 6.70711C0.898462 6.31658 0.898462 5.68342 1.28899 5.29289L5.78899 0.792893C6.17951 0.402369 6.81268 0.402369 7.2032 0.792893C7.59373 1.18342 7.59373 1.81658 7.2032 2.20711L4.41031 5L17.9961 5C18.5484 5 18.9961 5.44772 18.9961 6C18.9961 6.55228 18.5484 7 17.9961 7L4.41031 7L7.2032 9.79289C7.59373 10.1834 7.59373 10.8166 7.2032 11.2071Z"/>
+              </svg>
+              <span class="visually-hidden">Previous</span>
+            </button>
+          </li>
+          <li class="review-item review-active">
             <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
             <div class="reviewer-container">
               <span class="reviewer-name">Eleanor Pena</span>
@@ -474,31 +481,54 @@
             </div>
           </li>
         </ul>
-        <div class="slider-pagination-wrapper">
-          <span class="pagination-item"></span>
-          <span class="pagination-item"></span>
-          <span class="pagination-item"></span>
-          <span class="pagination-item"></span>
-          <span class="pagination-item"></span>
-        </div>
+        <ol class="slider-pagination-wrapper">
+          <li class="pagination-item active-slide">
+            <button class="pagination-btn" type="button">
+              <span class="visually-hidden">slide 1</span>
+            </button>
+          </li>
+          <li class="pagination-item">
+            <button class="pagination-btn" type="button">
+              <span class="visually-hidden">slide 2</span>
+            </button>
+          </li>
+          <li class="pagination-item">
+            <button class="pagination-btn" type="button">
+              <span class="visually-hidden">slide 3</span>
+            </button>
+          </li>
+          <li class="pagination-item">
+            <button class="pagination-btn" type="button">
+              <span class="visually-hidden">slide 4</span>
+            </button>
+          </li>
+          <li class="pagination-item">
+            <button class="pagination-btn" type="button">
+              <span class="visually-hidden">slide 5</span>
+            </button>
+          </li>
+        </ol>
       </div>
     </section>
     <section class="blog-section section">
-      <div class="section-container">  
-        <h3 class="title section-title">Latest posts</h3>
-        <h6 class="pretitle">Our blog</h6>
-        <button class="button filled-btn" type="button">Go to blog</button>
+      <div class="section-container">
+        <div class="blog-top-container">
+          <h3 class="title section-title">Latest posts</h3>
+          <h6 class="pretitle">Our blog</h6>
+          <button class="button filled-btn" type="button">Go to blog</button>
+        </div>
         <ul class="posts-list">
           <li class="post-item">
             <div class="blog-image-wrapper">
               <span class="post-label">Podcast</span>
-              <img src="" alt="Podcast" width="390" height="300">
-              <ul class="post-parameters">
-                <li class="post-type">Marketing</li>
-                <li class="post-date">September 4, 2020</li>
-                <li class="post-duration">36 min</li>
-              </ul>
+              <img src="/images/blog-1.jpg" alt="Podcast" width="390" height="300">
+              
             </div>
+            <ul class="post-parameters">
+              <li class="post-param post-type">Marketing</li>
+              <li class="post-param post-date">September 4, 2020</li>
+              <li class="post-param post-duration">36 min</li>
+            </ul>
             <h5 class="post-title small-title">What is traffic arbitrage and does it really make money?</h5>
             <p class="post-starting small-text">Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...</p>
             <a href="#" class="to-post-btn">Listen</a>
@@ -506,13 +536,13 @@
           <li class="post-item">
             <div class="blog-image-wrapper">
               <span class="post-label">Video</span>
-              <img src="" alt="Video" width="390" height="300">
-              <ul class="post-parameters">
-                <li class="post-type">Management</li>
-                <li class="post-date">August 25, 2020</li>
-                <li class="post-duration">45 min</li>
-              </ul>
+              <img src="/images/blog-2.jpg" alt="Video" width="390" height="300">
             </div>
+            <ul class="post-parameters">
+              <li class="post-param post-type">Management</li>
+              <li class="post-param post-date">August 25, 2020</li>
+              <li class="post-param post-duration">45 min</li>
+            </ul>
             <h5 class="post-title small-title">What to do and who to talk to if you want to get feedback on the product</h5>
             <p class="post-starting small-text">Neque a, senectus consectetur odio in aliquet nec eu. Ultricies ac nibh urna urna sagittis faucibus...</p>
             <a href="#" class="to-post-btn">Watch</a>
@@ -520,12 +550,12 @@
           <li class="post-item">
             <div class="blog-image-wrapper">
               <span class="post-label">Article</span>
-              <img src="" alt="Article" width="390" height="300">
-              <ul class="post-parameters">
-                <li class="post-type">Design</li>
-                <li class="post-date">August 8, 2020</li>
-              </ul>
+              <img src="/images/blog-3.jpg" alt="Article" width="390" height="300">
             </div>
+            <ul class="post-parameters">
+              <li class="post-param post-type">Design</li>
+              <li class="post-param post-date">August 8, 2020</li>
+            </ul>
             <h5 class="post-title small-title">Should you choose a creative profession if you are attracted to creativity?</h5>
             <p class="post-starting small-text">Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...</p>
             <a href="#" class="to-post-btn">Read</a>

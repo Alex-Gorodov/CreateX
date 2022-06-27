@@ -4,6 +4,7 @@
   --white: #ffffff;
   --gray-200: #f4f5f7;
   --gray-300: #e5e8ed;
+  --gray-500: #b3b7bc;
   --gray-600: #9a9ca5;
   --gray-700: #787a80;
   --gray-800: #424551;
@@ -124,8 +125,12 @@ body {
   cursor: pointer;
 }
 
+.slider-btn svg {
+  transform: translateY(2px);
+}
+
 .slider-btn:last-child svg {
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateY(-2px);
 }
 
 .slider-btn:hover {
@@ -153,9 +158,14 @@ body {
   margin-right: auto;
 }
 
+.title {
+  color: var(--gray-900);
+}
+
 .pretitle {
   padding: 0;
   margin: 0;
+  margin-bottom: 8px;
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
@@ -713,6 +723,11 @@ body {
   padding: 0 32px;
 }
 
+.events-card:hover  {
+  box-shadow: 0px 80px 80px -20px rgba(255, 63, 58, 0.16), 0px 30px 24px -10px rgba(255, 63, 58, 0.1), 0px 12px 10px -6px rgba(255, 63, 58, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+  z-index: 2;
+}
+
 .event-name {
   margin: 0;
   padding: 0;
@@ -837,6 +852,7 @@ body {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  overflow-x: hidden;
 }
 
 .tutors-card {
@@ -932,6 +948,281 @@ body {
   background-color: var(--gray-200);
 }
 
+.reviews-section .section-container {
+  position: relative;
+  display: grid;
+  grid-template-areas: "pretitle"
+                       "title"
+                       "slider"
+                       "pagination";
+}
+
+.reviews-section .pretitle,
+.reviews-section .title {
+  text-align: center;
+}
+
+.reviews-section .title {
+  margin-bottom: 60px;
+}
+
+.reviews-slider {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+.reviews-slider .slider-buttons-wrapper {
+  position: absolute;
+  top: 50%;
+  left: -22%;
+  display: flex;
+  width: 1242px;
+  justify-content: space-between;
+}
+
+.review-item {
+  display: none;
+  max-width: 1020px;
+  padding: 64px 105px;
+  border-radius: 4px;
+  background-color: var(--white);
+  flex-direction: column;
+}
+
+.review-active {
+  display: flex;
+}
+
+.review-text {
+  position: relative;
+  max-width: 660px;
+  padding-left: 60px;
+}
+
+.review-text::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 28px;
+  height: 20px;
+  background-image: url("../images/braces.png");
+  background-size: 28px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  content: "";
+}
+
+.reviewer-container {
+  display: grid;
+  max-width: 260px;
+  align-items: center;
+  grid-template-areas: "image name"
+                       "image position";
+  padding-left: 60px;
+}
+
+.reviewer-container::before {
+  display: block;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-size: 72px 72px;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-area: image;
+
+  content: "";
+}
+
+.reviewer-container:first-of-type::before {
+  background-image: url("../images/reviewer-1.png");
+}
+
+.reviewer-name {
+  font-weight: 700;
+  color: var(--gray-900);
+  grid-area: name;
+}
+
+.reviewer-position {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--gray-700);
+  grid-area: position;
+}
+
+.slider-pagination-wrapper {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  grid-area: pagination;
+
+  list-style-type: none;
+}
+
+.pagination-btn {
+  width: 30px;
+  height: 3px;
+  border: none;
+  background-color: var(--gray-500);
+}
+
+.pagination-item:not(:last-of-type) .pagination-btn {
+  margin-right: 12px;
+}
+
+.active-slide .pagination-btn {
+  background-color: var(--gray-800);
+}
+
+/********************************     Blog-section      ********************************/
+
+.blog-section .section-container {
+  padding-top: 80px;
+}
+
+.blog-top-container {
+  display: grid;
+  grid-template-areas: "pretitle pretitle"
+                       "title button";
+  justify-content: space-between;
+}
+
+.posts-list {
+  display: flex;
+  padding: 0;
+  padding-top: 60px;
+  margin: 0;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+.post-item {
+  display: flex;
+  width: 390px;
+  flex-direction: column;
+}
+
+.blog-image-wrapper {
+  position: relative;
+  width: 390px;
+  height: 300px;
+}
+
+.post-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 1px 8px;
+  background-color: var(--white);
+  border-radius: 4px;
+
+  background-size: 16px 16px;
+}
+
+.post-label::before {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  background-size: 16px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  content: "";
+}
+
+.post-item:nth-child(1) .post-label::before {
+  background-image: url("../images/Mic.svg");
+  transform: translateY(2px);
+}
+
+.post-item:nth-child(2) .post-label::before {
+  background-image: url("../images/Play.svg");
+  transform: translateY(2px);
+}
+
+.post-item:nth-child(3) .post-label::before {
+  background-image: url("../images/Files.svg");
+  transform: translateY(2px);
+}
+
+.post-parameters {
+  display: flex;
+  margin-top: 16px;
+  margin-left: 0;
+  margin-bottom: 8px;
+  margin-right: 0;
+  padding: 0;
+  list-style-type: none;
+  color: var(--gray-700);
+}
+
+.post-param:not(:last-child)::after {
+  display: inline-block;
+  height: 12px;
+  width: 1px;
+  margin: 0 12px;
+  background-color: var(--gray-700);
+
+  content: "";
+}
+
+.post-title {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.post-param::before {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  background-size: 16px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateY(2px);
+}
+
+.post-date::before {
+  content: "";
+  background-image: url("../images/Calendar.svg");
+}
+
+.post-duration::before {
+  content: "";
+  background-image: url("../images/Clock.svg");
+}
+
+.to-post-btn {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--gray-900);
+  font-weight: 700;
+}
+
+.to-post-btn::after {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  background-size: 24px 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/Red-arrow.svg");
+
+  content: "";
+}
 
 
 /************************************************************************************************
