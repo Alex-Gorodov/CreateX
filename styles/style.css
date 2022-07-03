@@ -68,6 +68,7 @@ body {
   min-height: 100%;
   padding: 0;
   margin: 0 auto;
+  overflow-x: hidden;
 
   font-family: var(--main-font);
   font-weight: 400;
@@ -92,11 +93,13 @@ body {
 .button {
   display: inline-block;
   vertical-align: middle;
-  max-height: 52px;
+  max-height: fit-content;
+  max-width: fit-content;
   padding: 0 40px;
   font-weight: 700;
   line-height: 52px;
   text-decoration: none;
+  text-align: center;
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -146,21 +149,15 @@ body {
   color: var(--white);
 }
 
-.section {
-  padding-bottom: 120px;
-}
-
 .section-container {
+  position: relative;
   display: grid;
-  max-width: 1230px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.title {
-  color: var(--gray-900);
-  padding: 0;
-  margin: 0;
+  max-width: 1310px;
+  margin: auto;
+  padding: 120px 40px;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
 }
 
 .pretitle {
@@ -171,15 +168,18 @@ body {
   line-height: 24px;
   text-transform: uppercase;
   font-weight: 700;
-  grid-area: pretitle;
+  order: -1;
 }
 
 .section-title {
+  padding: 0;
+  margin: 0;
   font-size: 46px;
   line-height: 60px;
   font-weight: 900;
-
+  color: var(--gray-900);
   white-space: nowrap;
+  grid-row-start: 2;
 }
 
 /************************************************************************************************
@@ -211,8 +211,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-  margin-bottom: 80px;
-  width: 1230px;
+  max-width: 1230px;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
 }
@@ -266,24 +266,9 @@ body {
   content: "";
 }
 
-.section-entry {
-  display: grid;
-  grid-template-rows: 84px 320px auto auto;
-  grid-template-areas: "play image"
-                       "title image"
-                       "buttons image"
-                       "statistics statistics";
-  width: 1230px;
-  margin: 0 auto;
-  padding-top: 50px;
-}
-
 .play-btn-wrapper {
   display: flex;
-  margin-bottom: 40px;
-  max-height: 84px;
   align-items: center;
-  grid-area: play;
 }
 
 .play-btn {
@@ -311,58 +296,66 @@ body {
   line-height: 21px;
 }
 
-.entry-title {
-  max-width: 500px;
-  font-size: 64px;
-  line-height: 83.2px;
-  grid-area: title;
+.intro-section .section-container {
+  padding-bottom: 60px;
 }
 
-.buttons-list {
+.intro-title {
+  max-width: 500px;
+  margin: 20px 0 50px;
+  font-size: 64px;
+  line-height: 83.2px;
+}
+
+.intro-buttons-list {
   display: flex;
   padding: 0;
   margin: 0;
-  margin-top: 40px;
-  margin-bottom: 240px;
   width: 373px;
   justify-content: space-between;
-  grid-area: buttons;
-  list-style-type: none;
   white-space: nowrap;
+  align-self: baseline;
 }
 
-.section-entry .image-wrapper {
+.intro-image-container {
   width: 600px;
+  height: 550px;
+  grid-row: 1 / 4;
+  grid-column: -2 / -1;
+}
+
+.advantages-image-wrapper {
+  width: 705px;
   height: 550px;
 }
 
-.image-wrapper {
-  grid-area: image;
-}
-
 .statistics-list {
-  display: flex;
-  width: 1230px;
+  display: grid;
+  max-width: 1230px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 160px;
+  grid-column: span 2;
+  grid-template-columns: repeat(4, max-content);
   justify-content: space-between;
-  list-style-type: none;
-  grid-area: statistics;
 }
 
 .statistics-item {
-  position: relative;
   display: flex;
   align-items: center;
 }
 
-.statistics-item:not(:last-of-type)::after {
-  position: absolute;
-  left: 100%;
+.statistics-item:not(:first-of-type)::before {
   display: block;
   width: 8px;
   height: 8px;
-  margin-left: 25%;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--primary-color);
   border-radius: 50%;
+  margin-left: 66px;
+  margin-right: 66px;
 
   content: "";
 }
@@ -388,33 +381,13 @@ body {
 
 /********************************     Advantages-section      ********************************/
 
-.section-advantages {
-  padding: 180px;
-}
-
-.section-advantages .section-container {
-  gap: 135px;
-  grid-template-areas: "image section-content";
-  justify-content: space-between;
-}
-
-.image-wrapper {
-  grid-area: image;
+.advantages-section .section-container {
+  gap: 40px;
 }
 
 .advantages-content-container {
   display: grid;
-  padding: 0;
-  margin: 0;
-  grid-area: section-content;
-  grid-template-areas: "pretitle"
-                       "title"
-                       "advantages"
-                       "button";
-}
-
-.section-title {
-  grid-area: title;
+  justify-self: end;
 }
 
 .advantages-list {
@@ -426,7 +399,6 @@ body {
   margin-top: 40px;
   margin-bottom: 48px;
   list-style-type: none;
-  grid-area: advantages;
 }
 
 .advantages-item {
@@ -456,38 +428,22 @@ body {
   content: "";
 }
 
-.section-advantages .button {
-  max-width: fit-content;
-  max-height: 44px;
-  grid-area: button;
-  line-height: 44px;
-  padding: 0 32px;
-}
-
 /********************************     Courses-section      ********************************/
 
-.section-courses {
-  display: grid;
-}
-
-.courses-top-container {
-  display: grid;
-  grid-template-areas: "pretitle pretitle"
-                       "title button";
-  justify-content: space-between;
-}
-
-.courses-top-container .section-title {
-  margin-bottom: 60px;
+.courses-section .button {
+  justify-self: end;
+  grid-row-start: 2;
 }
 
 .courses-list {
   display: grid;
   padding: 0;
-  margin: 0;
-  grid-template-columns: repeat(2, 1fr);
+  margin: 40px 0;
+  grid-template-columns: repeat(auto-fit, 600px);
+  grid-column: span 2;
   gap: 30px;
   list-style-type: none;
+  justify-content: center;
 }
 
 .course-card {
@@ -610,17 +566,18 @@ body {
   content: "";
 }
 
-.courses-page-body .section-container {
-  grid-template-areas: "pretitle"
-                       "title";
-  text-align: center;
+.courses-page-body .section-courses .section-container {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding: 60px 40px;
 }
 
 .filters-wrapper {
   display: flex;
   margin-top: 60px;
   margin-bottom: 60px;
-  width: 1230px;
+  width: 100%;
+  grid-column: 1 / -1;
   justify-content: space-between;
 }
 
@@ -653,8 +610,10 @@ body {
 
 .courses-page-body .courses-list {
   display: grid;
+  width: 100%;
   margin-bottom: 80px;
-  grid-template-columns: repeat(3, 390px);
+  grid-template-columns: repeat(auto-fit, 390px);
+  grid-column: 1 / -1;
 }
 
 .big-course-card {
@@ -730,24 +689,21 @@ body {
 
 /********************************     Benefits-section      ********************************/
 
-.section-benefits .section-container {
-  grid-template-areas: "pretitle"
-                       "title"
-                       "buttons"
-                       "description";
+.benefits-section .section-container {
+  grid-template-columns: 1fr;
 }
 
-.section-benefits .pretitle,
-.section-benefits .section-title {
+.benefits-section .pretitle,
+.benefits-section .section-title {
   text-align: center;
 }
 
 .benefits-buttons-list {
   display: flex;
-  width: 1230px;
   max-height: 46px;
   padding: 0;
   margin: 60px auto;
+  grid-column: span 2;
   list-style-type: none;
   justify-content: space-between;
 }
@@ -768,21 +724,18 @@ body {
 
 .benefits-item-wrapper {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: space-between;
-  grid-template-areas: "text image"
-                       "text image";
+  grid-column: span 2;
 }
 
 .benefits-item-wrapper .subtitle {
   padding: 0;
   margin: 0;
-  grid-area: subtitle;
 }
 
 .benefit-text {
   max-width: 495px;
-  grid-area: text;
 }
 
 .subtitle {
@@ -795,26 +748,22 @@ body {
 
 /********************************     Events-section      ********************************/
 
-.section-events {
+.events-section {
   background: var(--section-gradient);
-  padding-bottom: 80px;
-  padding-top: 80px;
 }
 
-.section-events .section-container {
-  grid-template-areas: "pretitle"
-                       "title"
-                       "events"
-                       "button";
+.events-section .section-container {
+  grid-template-columns: 1fr;
 }
 
-.section-events .pretitle,
-.section-events .section-title {
+.events-section .pretitle,
+.events-section .section-title {
   text-align: center;
 }
 
 .events-list {
   display: flex;
+  width: 100%;
   flex-direction: column;
   padding: 0;
   margin: 60px auto;
@@ -823,11 +772,11 @@ body {
 .events-card {
   display: grid;
   grid-template-columns: 70px 140px auto 140px;
-  width: 1230px;
   margin-bottom: 24px;
   padding: 32px 40px;
   background-color: var(--white);
   border-radius: 4px;
+  align-items: center;
 }
 
 .event-day {
@@ -898,42 +847,27 @@ body {
 /********************************     Certificate-section      ********************************/
 
 .certificate-section .section-container {
-  position: relative;
-  padding-top: 120px;
-  padding-bottom: 90px;
-  grid-template-areas: "text-content image";
-}
-
-.text-container {
-  display: grid;
-  grid-area: text-content;
-  grid-template-areas: "pretitle"
-                       "title"
-                       "text"
-                       "list";
+  grid-template-columns: 1fr;
 }
 
 .certificate-section .small-text {
   max-width: 350px;
 }
 
-.certificate-section .section-title {
-  max-width: 410px;
-  white-space: normal;
-}
-
 .certificate-illustration-container {
   position: absolute;
+  right: 20px;
+  top: 100px;
+
+  max-width: 705px;
+  max-height: 500px;
   padding: 0;
   margin: 0;
-  right: 0;
-  top: 100px;
-  
+
 }
 
 .certificate-illustration-container img {
   border: 1px solid #E5E8ED;
-
   box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.16), 0px 30px 24px -10px rgba(154, 156, 165, 0.1), 0px 12px 10px -6px rgba(154, 156, 165, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
   border-radius: 4px;
 }
@@ -969,43 +903,31 @@ body {
 }
 
 .courses-page-body .certificate-section .section-container {
-  text-align: left;
-  padding-top: 200px;
+  padding: 200px 40px;
 }
+
+
 
 /********************************     Tutors-section      ********************************/
 
 .tutors-section {
-  padding-top: 160px;
-  padding-bottom: 40px;
-  margin-top: -100px;
   background-color: var(--gray-200);
 }
 
-.tutors-top-container {
-  display: grid;
-  grid-template-areas: "pretitle pretitle"
-                       "title buttons";
-  justify-content: space-between;
-}
-
-.tutors-top-container .title {
-  grid-area: title;
-  margin-bottom: 60px;
-}
-
-.tutors-top-container .slider-buttons-wrapper {
-  grid-area: buttons;
+.tutors-section .section-container {
+  padding-bottom: 40px;
 }
 
 .tutors-list {
-  display: flex;
-  width: 1230px;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 285px);
+  gap: 30px;
+  justify-content: center;
   padding: 0;
-  margin: 0;
+  margin-top: 60px;
   list-style-type: none;
   overflow-x: hidden;
+  grid-column: span 2;
 }
 
 .tutors-card {
@@ -1090,31 +1012,33 @@ body {
   color: var(--gray-700);
 }
 
-.tutor-hidden {
+.tutors-card:nth-child(n + 5) {
   display: none;
+}
+
+.tutors-slider-buttons {
+  grid-row-start: 2;
+  display: flex;
+  justify-self: end;
 }
 
 /********************************     Reviews-section      ********************************/
 
 .reviews-section {
-  padding-top: 60px;
   background-color: var(--gray-200);
 }
 
 .reviews-section .section-container {
   position: relative;
-  grid-template-areas: "pretitle"
-                       "title"
-                       "slider"
-                       "pagination";
+  grid-template-columns: 1fr;
 }
 
 .reviews-section .pretitle,
-.reviews-section .title {
+.reviews-section .section-title {
   text-align: center;
 }
 
-.reviews-section .title {
+.reviews-section .section-title {
   margin-bottom: 60px;
 }
 
@@ -1122,17 +1046,18 @@ body {
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  grid-column: span 2;
   padding: 0;
   list-style-type: none;
 }
 
-.reviews-slider .slider-buttons-wrapper {
+.reviews-slider-buttons {
   position: absolute;
   top: 50%;
-  left: -22%;
+  left: 0;
   display: flex;
-  width: 1242px;
   justify-content: space-between;
+  width: 100%;
 }
 
 .review-item {
@@ -1186,7 +1111,6 @@ body {
   background-size: 72px 72px;
   background-position: center;
   background-repeat: no-repeat;
-  grid-area: image;
 
   content: "";
 }
@@ -1198,21 +1122,19 @@ body {
 .reviewer-name {
   font-weight: 700;
   color: var(--gray-900);
-  grid-area: name;
 }
 
 .reviewer-position {
   font-size: 14px;
   line-height: 21px;
   color: var(--gray-700);
-  grid-area: position;
 }
 
 .slider-pagination-wrapper {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  grid-area: pagination;
+  padding: 0;
 
   list-style-type: none;
 }
@@ -1239,21 +1161,20 @@ body {
   padding-top: 80px;
 }
 
-.blog-top-container {
-  display: grid;
-  grid-template-areas: "pretitle pretitle"
-                       "title button";
-  justify-content: space-between;
+.blog-section .button {
+  grid-row-start: 2;
+  justify-self: end;
 }
 
 .posts-list {
   display: flex;
   flex-wrap: wrap;
+  grid-column: span 2;
   padding: 0;
   padding-top: 60px;
   margin: 0;
   list-style-type: none;
-  justify-content: space-between;
+  justify-content: start;
 }
 
 .post-item {
@@ -1261,6 +1182,10 @@ body {
   margin-bottom: 20px;
   width: 390px;
   flex-direction: column;
+}
+
+.post-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .blog-image-wrapper {
@@ -1383,8 +1308,6 @@ body {
 
 .subscribe-section {
   position: relative;
-  padding-top: 120px;
-  padding-bottom: 180px;
   background: var(--section-gradient);
 }
 
@@ -1421,17 +1344,15 @@ body {
 }
 
 .subscribe-section .section-container {
-  grid-template-areas: "pretitle"
-                       "title"
-                       "form";
+  grid-template-columns: 1fr;
 }
 
 .subscribe-section .pretitle,
-.subscribe-section .title {
+.subscribe-section .section-title {
   text-align: center;
 }
 
-.subscribe-section .title {
+.subscribe-section .section-title {
   margin-bottom: 60px;
 }
 
@@ -1440,6 +1361,7 @@ body {
   width: 600px;
   margin-left: auto;
   margin-right: auto;
+  z-index: 1;
 }
 
 .form-input {
@@ -1471,12 +1393,13 @@ body {
 
 .footer-container {
   display: flex;
-  width: 1230px;
+  flex-wrap: wrap;
+  max-width: 1230px;
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 80px 0 60px;
+  padding: 80px 20px 60px;
 }
 
 .footer-logo {
@@ -1602,7 +1525,11 @@ body {
   background-repeat: no-repeat;
 }
 
-.footer-fifth-column .footer-text {
+.footer-column {
+  padding: 10px;
+}
+
+.footer-column:last-child .footer-text {
   width: 286px;
   font-size: 10px;
   line-height: 15px;
@@ -1615,7 +1542,8 @@ body {
 
 .copyright-container {
   display: flex;
-  width: 1230px;
+  max-width: 1230px;
+  padding: 0 20px;
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;

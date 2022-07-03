@@ -1,0 +1,130 @@
+.course-page-body .page-header {
+  background: var(--section-gradient);
+}
+
+.course-page-intro {
+  display: grid;
+  padding: 120px 40px;
+  column-gap: 135px;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.course-page-intro .pretitle {
+  color: var(--primary-color);
+}
+
+.about-course-section .section-container {
+  align-items: start;
+}
+
+.about-course-section .section-title {
+  grid-row: 1/2;
+  grid-column: 1 / 2;
+}
+
+.about-course-section .small-text {
+  max-width: 600px;
+  grid-row: 2/3;
+  grid-column: 1 / 2;
+}
+
+.about-course-section .subtitle {
+  grid-row: 3/4;
+  grid-column: 1 / 2;
+}
+
+.course-plan-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  grid-row: 4/5;
+  grid-column: 1 / 2;
+}
+
+.course-plan-item {
+  display: grid;
+  grid-template-columns: 16px auto;
+  gap: 16px;
+  min-width: 240px;
+
+  margin: 0;
+  padding: 0;
+  margin-bottom: 4px;
+}
+
+.course-plan-item::before {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  padding-top: 25px;
+  margin: 0;
+  background-image: url("../images/check-icon.svg");
+  background-size: 16px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  content: "";
+}
+
+.course-info-wrapper {
+  padding: 40px 32px;
+  display: flex;
+  max-width: 495px;
+  grid-row: 1 / 5;
+  flex-direction: column;
+  align-items: center;
+  justify-self: end;
+
+  background: var(--white);
+
+  border: 1px solid var(--gray-300);
+
+  box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  border-radius: 4px;
+}
+
+.course-info-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.course-info-item {
+  margin-bottom: 44px;
+}
+
+.course-info-pretitle {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--gray-900);
+  text-transform: uppercase;
+}
+
+.course-info-title {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31.2px;
+  color: var(--primary-color);
+}
+
+.course-info-description {
+  margin: 0;
+  padding: 0;
+  color: var(--gray-700);
+}
+
+.course-info-wrapper .button {
+  max-width: 100%;
+  width: 100%;
+}
