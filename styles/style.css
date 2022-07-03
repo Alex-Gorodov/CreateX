@@ -150,7 +150,6 @@ body {
 }
 
 .section-container {
-  position: relative;
   display: grid;
   max-width: 1310px;
   margin: auto;
@@ -855,15 +854,10 @@ body {
 }
 
 .certificate-illustration-container {
-  position: absolute;
-  right: 20px;
-  top: 100px;
-
   max-width: 705px;
   max-height: 500px;
   padding: 0;
   margin: 0;
-
 }
 
 .certificate-illustration-container img {
