@@ -1,0 +1,58 @@
+@media (max-width: 820px) {
+
+  .pretitle,
+  .section-title {
+    text-align: center;
+  }
+  
+  .right-floated-btn,
+  .left-floated-btn {
+    justify-self: center;
+    margin-top: -40px;
+    margin-bottom: 40px;
+    grid-row: 3;
+  }
+
+  .image-container {
+    transform: scale(0.5);
+  }
+
+  .courses-list {
+    justify-items: center;
+  }
+
+  .small-course-card {
+    max-width: 480px;
+  }
+
+  .certificate-section .one-columned-container {
+    justify-items: center;
+  }
+
+  .certificate-illustration-container {
+    top: 320px;
+    right: 50%;
+    margin-right: -75%;
+  }
+
+  .tutors-section {
+    margin-top: 120px;
+  }
+
+  .post-item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .subscribe-section:after {
+    display: none;
+  }
+
+  .subscribe-section:before {
+    left: 25%;
+    opacity: 0.5;
+  }
+
+  .subscribe-input {
+    margin-bottom: 24px;
+  }
+}
