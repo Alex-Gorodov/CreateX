@@ -190,6 +190,10 @@
     top: 55%;
   }
 
+  .posts-list {
+    justify-content: center;
+  }
+
   .post-item {
     max-width: 310px;
     align-items: center;
