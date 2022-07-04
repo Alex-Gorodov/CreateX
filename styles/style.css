@@ -835,8 +835,8 @@ body {
 
 .certificate-illustration-container {
   position: absolute;
-  top: 120px;
-  right: 0;
+  top: 100px;
+  left: 565px;
   max-width: 705px;
   max-height: 500px;
   padding: 0;

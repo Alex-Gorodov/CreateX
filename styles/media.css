@@ -5,6 +5,9 @@
   }
 
   .section-container {
+    grid-template-columns: 1fr;    
+    justify-items: center;
+    column-gap: 0;
     padding: 40px 20px;
   }
 
@@ -166,8 +169,9 @@
   }
 
   .certificate-illustration-container {
-    top: 210px;
-    right: -50%;
+    top: 200px;
+    left: calc(-10px);
+    margin-left: -50%;
   }
 
   .tutors-section {
