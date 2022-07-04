@@ -4,6 +4,15 @@
     padding: 40px 20px;
   }
 
+  .pretitle {
+    font-size: 12px;
+  }
+
+  .section-title {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
   .pretitle,
   .section-title {
     text-align: center;
@@ -165,9 +174,18 @@
     top: 55%;
   }
 
+  .post-item {
+    width: 360px;
+    align-items: center;
+  }
+
   .post-item:not(:last-child) {
     margin-right: 0;
     margin-bottom: 120px;
+  }
+
+  .blog-image-wrapper {
+    transform: scale(0.8);
   }
 
   .subscribe-section:after {
@@ -175,11 +193,7 @@
   }
 
   .subscribe-section:before {
-    opacity: 0.5;
-  }
-
-  .subscribe-section .section-title {
-    font-size: 26px;
+    display: none;
   }
 
   .subscribe-input {
