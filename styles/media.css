@@ -61,6 +61,7 @@
 
   .intro-buttons-list {
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .intro-image-container {
@@ -83,9 +84,9 @@
   
   .small-course-card {
     max-width: 370px;
-    padding: 15px;
+    padding: 15px 10px;
     gap: 5px;
-    padding-left: 190px;
+    padding-left: 180px;
     background-size: 165px 165px;
   }
 
