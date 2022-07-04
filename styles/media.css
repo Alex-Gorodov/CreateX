@@ -4,7 +4,7 @@
   .section-title {
     text-align: center;
   }
-  
+
   .right-floated-btn,
   .left-floated-btn {
     justify-self: center;
@@ -21,8 +21,30 @@
     justify-items: center;
   }
 
+  .course-name {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .price-container {
+    flex-wrap: wrap;
+  }
+
+  .course-author {
+    font-size: 12px;
+  }
+
+  .course-author::before {
+    display: none;
+  }
+
   .small-course-card {
-    max-width: 480px;
+    max-width: 380px;
+    padding-left: 230px;
+  }
+
+  .benefits-buttons-list {
+    justify-content: center;
   }
 
   .certificate-section .one-columned-container {
