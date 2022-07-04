@@ -37,9 +37,9 @@
     transform: scale(0.5);
   }
 
-  .createx-logo {
+  .header-logo {
     margin: 0 auto;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
   }
 
   .header-navigation-list {
@@ -69,11 +69,11 @@
 
   .intro-image-container {
     grid-row: 4;
+    max-height: 300px;
   }
 
   .statistics-list {
-    max-width: 340px;
-    margin-top: 60px;
+    max-width: 260px;
   }
 
   .advantages-list {
@@ -224,5 +224,19 @@
     margin-bottom: 24px;
     margin-right: 0;
     width: 320px;
+  }
+
+  .footer-column:nth-child(2n) {
+    align-items: flex-end;
+  }
+
+  .footer-column:nth-child(2n) .footer-column-list {
+    align-items: flex-end;
+  }
+
+  .footer-column:last-child {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
   }
 }

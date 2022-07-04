@@ -1,10 +1,11 @@
 .course-page-body .page-header {
   background: var(--section-gradient);
+  padding: 20px 40px;
 }
 
 .course-page-intro {
   display: grid;
-  padding: 120px 40px;
+  padding: 120px 20px;
   column-gap: 135px;
   grid-template-columns: 1fr;
   justify-items: center;

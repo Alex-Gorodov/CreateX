@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Courses</title>
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/media.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body class="courses-page-body">
-  <header class="page-header">
-    <nav class="header-navigation">
+  <header>
+    <nav class="header-navigation page-header">
       <a href="index.html" class="createx-logo header-logo">
-        <svg width="130" height="22" viewBox="0 0 130 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="130" height="22" role="img" aria-hidden="true" aria-label="CreateX logo." focusable="false" viewBox="0 0 130 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_25855_1583)">
           <path d="M0 11.0998C0 4.9998 3.3 1.2998 8.7 1.2998C12.8 1.2998 16.1 3.7998 16.7 7.4998C16.8 7.8998 16.5 8.1998 16.1 8.1998H13.5C13.2 8.1998 13 7.9998 12.9 7.6998C12.4 5.7998 10.8 4.5998 8.7 4.5998C5.8 4.5998 4 7.0998 4 11.0998C4 15.0998 5.8 17.5998 8.8 17.5998C10.9 17.5998 12.4 16.4998 13 14.6998C13.1 14.3998 13.3 14.1998 13.6 14.1998H16.2C16.6 14.1998 16.9 14.5998 16.8 14.8998C16.2 18.4998 13 20.8998 8.8 20.8998C3.3 20.8998 0 17.0998 0 11.0998Z" fill="#1E212C"/>
           <path d="M24.2997 20.4001H21.3997C21.0997 20.4001 20.8997 20.2001 20.8997 19.9001V2.60006C20.8997 2.20006 21.2997 1.80006 21.6997 1.80006H28.6997C32.7997 1.80006 35.2997 4.10006 35.2997 7.70006C35.2997 9.80006 34.2997 11.7001 32.5997 12.7001C32.1997 12.9001 32.0997 13.4001 32.2997 13.7001L35.3997 19.6001C35.5997 19.9001 35.2997 20.3001 34.9997 20.3001H31.6997C31.4997 20.3001 31.2997 20.2001 31.1997 20.0001L28.2997 14.0001C28.1997 13.7001 27.8997 13.6001 27.5997 13.6001H25.2997C24.9997 13.6001 24.7997 13.8001 24.7997 14.1001V20.0001C24.8997 20.2001 24.5997 20.4001 24.2997 20.4001ZM24.8997 10.2001C24.8997 10.5001 25.0997 10.7001 25.3997 10.7001H28.3997C30.3997 10.7001 31.4997 9.60006 31.4997 7.80006C31.4997 6.00006 30.2997 4.90006 28.3997 4.90006H25.4997C25.1997 4.90006 24.9997 5.10006 24.9997 5.40006V10.2001H24.8997Z" fill="#1E212C"/>
@@ -34,8 +35,8 @@
         <li class="header-navigation-item">
           <a href="#" class="header-navigation-link">About Us</a>
         </li>
-        <li class="header-navigation-item active-page">
-          <a href="#" class="header-navigation-link">Courses</a>
+        <li class="header-navigation-item">
+          <a href="courses.html" class="header-navigation-link">Courses</a>
         </li>
         <li class="header-navigation-item">
           <a href="#" class="header-navigation-link">Events</a>
@@ -165,24 +166,10 @@
         <button class="list-load-more button" type="button">Load more</button>
       </div>
     </section>
-    <section class="reviews-section section">
-      <div class="section-container">
-        <h3 class="title section-title">What our students say</h3>
+    <section class="section gray-bg reviews-section">
+      <div class="section-container one-columned-container">
+        <h3 class="section-title">What our students say</h3>
         <h6 class="pretitle">Testimonials</h6>
-        <div class="reviews-slider-buttons">
-          <button class="slider-btn" type="button">
-            <svg width="19" height="12" viewBox="0 0 19 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2032 11.2071C6.81268 11.5976 6.17951 11.5976 5.78899 11.2071L1.28899 6.70711C0.898462 6.31658 0.898462 5.68342 1.28899 5.29289L5.78899 0.792893C6.17951 0.402369 6.81268 0.402369 7.2032 0.792893C7.59373 1.18342 7.59373 1.81658 7.2032 2.20711L4.41031 5L17.9961 5C18.5484 5 18.9961 5.44772 18.9961 6C18.9961 6.55228 18.5484 7 17.9961 7L4.41031 7L7.2032 9.79289C7.59373 10.1834 7.59373 10.8166 7.2032 11.2071Z"/>
-            </svg>
-            <span class="visually-hidden">Next</span>
-          </button>
-          <button class="slider-btn" type="button">
-            <svg width="19" height="12" viewBox="0 0 19 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2032 11.2071C6.81268 11.5976 6.17951 11.5976 5.78899 11.2071L1.28899 6.70711C0.898462 6.31658 0.898462 5.68342 1.28899 5.29289L5.78899 0.792893C6.17951 0.402369 6.81268 0.402369 7.2032 0.792893C7.59373 1.18342 7.59373 1.81658 7.2032 2.20711L4.41031 5L17.9961 5C18.5484 5 18.9961 5.44772 18.9961 6C18.9961 6.55228 18.5484 7 17.9961 7L4.41031 7L7.2032 9.79289C7.59373 10.1834 7.59373 10.8166 7.2032 11.2071Z"/>
-            </svg>
-            <span class="visually-hidden">Previous</span>
-          </button>
-        </div>
         <ul class="reviews-slider">
           
           <li class="review-item review-active">
@@ -221,40 +208,45 @@
             </div>
           </li>
         </ul>
-        <ol class="slider-pagination-wrapper">
-          <li class="pagination-item active-slide">
-            <button class="pagination-btn" type="button">
-              <span class="visually-hidden">slide 1</span>
-            </button>
+        <div class="reviews-slider-buttons">
+          <button class="slider-btn" type="button">
+            <svg width="19" height="12" role="img" aria-hidden="true" aria-label="Previous slide." focusable="false" viewBox="0 0 19 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2032 11.2071C6.81268 11.5976 6.17951 11.5976 5.78899 11.2071L1.28899 6.70711C0.898462 6.31658 0.898462 5.68342 1.28899 5.29289L5.78899 0.792893C6.17951 0.402369 6.81268 0.402369 7.2032 0.792893C7.59373 1.18342 7.59373 1.81658 7.2032 2.20711L4.41031 5L17.9961 5C18.5484 5 18.9961 5.44772 18.9961 6C18.9961 6.55228 18.5484 7 17.9961 7L4.41031 7L7.2032 9.79289C7.59373 10.1834 7.59373 10.8166 7.2032 11.2071Z"/>
+            </svg>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <button class="slider-btn slider-btn-next" type="button">
+            <svg width="19" height="12" role="img" aria-hidden="true" aria-label="Next slide." focusable="false" viewBox="0 0 19 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.2032 11.2071C6.81268 11.5976 6.17951 11.5976 5.78899 11.2071L1.28899 6.70711C0.898462 6.31658 0.898462 5.68342 1.28899 5.29289L5.78899 0.792893C6.17951 0.402369 6.81268 0.402369 7.2032 0.792893C7.59373 1.18342 7.59373 1.81658 7.2032 2.20711L4.41031 5L17.9961 5C18.5484 5 18.9961 5.44772 18.9961 6C18.9961 6.55228 18.5484 7 17.9961 7L4.41031 7L7.2032 9.79289C7.59373 10.1834 7.59373 10.8166 7.2032 11.2071Z"/>
+            </svg>
+            <span class="visually-hidden">Previous</span>
+          </button>
+        </div>
+        <div class="slider-pagination-wrapper">
+          <button class="pagination-btn active-slide" type="button">
+            <span class="visually-hidden">slide 1</span>
+          </button>
+          <button class="pagination-btn" type="button">
+            <span class="visually-hidden">slide 2</span>
+          </button>
+          <button class="pagination-btn" type="button">
+            <span class="visually-hidden">slide 3</span>
+          </button>
+          <button class="pagination-btn" type="button">
+            <span class="visually-hidden">slide 4</span>
+          </button>
+          <button class="pagination-btn" type="button">
+            <span class="visually-hidden">slide 5</span>
+          </button>
           </li>
-          <li class="pagination-item">
-            <button class="pagination-btn" type="button">
-              <span class="visually-hidden">slide 2</span>
-            </button>
-          </li>
-          <li class="pagination-item">
-            <button class="pagination-btn" type="button">
-              <span class="visually-hidden">slide 3</span>
-            </button>
-          </li>
-          <li class="pagination-item">
-            <button class="pagination-btn" type="button">
-              <span class="visually-hidden">slide 4</span>
-            </button>
-          </li>
-          <li class="pagination-item">
-            <button class="pagination-btn" type="button">
-              <span class="visually-hidden">slide 5</span>
-            </button>
-          </li>
-        </ol>
+        </div>
       </div>
     </section>
-    <section class="certificate-section section">
+    <section class="section certificate-section">
       <div class="section-container">
-        <h3 class="title section-title">Your expertise will <br>be confirmed</h3>
+        <h3 class="section-title">Your expertise<br> will&#160;be confirmed</h3>
         <h6 class="pretitle">Createx Certificate</h6>
-        <p class="small-text">We are accredited by international professional organizations and institutes:</p>
+        <p class="certificate-description">We are accredited by international professional <br>organizations and institutes:</p>
         <ul class="accreditation-list">
           <li class="accreditation-item">
             <span class="visually-hidden">Del Mar Strategy</span>
@@ -266,16 +258,16 @@
             <span class="visually-hidden">National</span>
           </li>
         </ul>
-        <div class="certificate-illustration-container">
+        <div class="certificate-illustration-container image-container">
           <img src="images/certificate.jpg" width="705" height="500" alt="Certificate">
         </div>
       </div>
     </section>
-    <section class="subscribe-section section">
-      <div class="section-container">
-        <h3 class="title section-title">Subscribe to the Createx School<br> announcements</h3>
+    <section class="section gradient-bg subscribe-section">
+      <div class="one-columned-container section-container">
+        <h3 class="section-title">Subscribe to the Createx&#160;School <br>announcements</h3>
         <h6 class="pretitle">Don't miss anything</h6>
-        <form class="subscribe-form" method="post">
+        <form class="subscribe-btn-wrapper" method="post">
           <label for="e-mail">
             <input class="form-input subscribe-input" type="email" name="email" id="e-mail" placeholder="Your working email" required>
           </label>
@@ -288,7 +280,7 @@
     <div class="container footer-container">
       <div class="footer-column">
         <a href="index.html" class="createx-logo footer-logo">
-          <svg width="130" height="22" viewBox="0 0 130 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="130" height="22" role="img" aria-hidden="true" aria-label="CreateX logo." focusable="false" viewBox="0 0 130 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_25855_2145)">
             <path d="M0 11.1008C0 5.00078 3.3 1.30078 8.7 1.30078C12.8 1.30078 16.1 3.80078 16.7 7.50078C16.8 7.90078 16.5 8.20078 16.1 8.20078H13.5C13.2 8.20078 13 8.00078 12.9 7.70078C12.4 5.80078 10.8 4.60078 8.7 4.60078C5.8 4.60078 4 7.10078 4 11.1008C4 15.1008 5.8 17.6008 8.8 17.6008C10.9 17.6008 12.4 16.5008 13 14.7008C13.1 14.4008 13.3 14.2008 13.6 14.2008H16.2C16.6 14.2008 16.9 14.6008 16.8 14.9008C16.2 18.5008 13 20.9008 8.8 20.9008C3.3 20.9008 0 17.1008 0 11.1008Z" fill="white"/>
             <path d="M24.2997 20.401H21.3997C21.0997 20.401 20.8997 20.201 20.8997 19.901V2.60104C20.8997 2.20104 21.2997 1.80104 21.6997 1.80104H28.6997C32.7997 1.80104 35.2997 4.10104 35.2997 7.70104C35.2997 9.80104 34.2997 11.701 32.5997 12.701C32.1997 12.901 32.0997 13.401 32.2997 13.701L35.3997 19.601C35.5997 19.901 35.2997 20.301 34.9997 20.301H31.6997C31.4997 20.301 31.2997 20.201 31.1997 20.001L28.2997 14.001C28.1997 13.701 27.8997 13.601 27.5997 13.601H25.2997C24.9997 13.601 24.7997 13.801 24.7997 14.101V20.001C24.8997 20.201 24.5997 20.401 24.2997 20.401ZM24.8997 10.201C24.8997 10.501 25.0997 10.701 25.3997 10.701H28.3997C30.3997 10.701 31.4997 9.60104 31.4997 7.80104C31.4997 6.00104 30.2997 4.90104 28.3997 4.90104H25.4997C25.1997 4.90104 24.9997 5.10104 24.9997 5.40104V10.201H24.8997Z" fill="white"/>
@@ -384,13 +376,13 @@
         <h6 class="small-title footer-title">Contact us</h6>
         <ul class="footer-column-list">
           <li class="footer-item footer-contacts-item">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="rgba(255, 255, 255, 0.6)" xmlns="http://www.w3.org/2000/svg">
+            <svg width="16" height="16" role="img" aria-hidden="true" aria-label="Call us." focusable="false" viewBox="0 0 16 16" fill="rgba(255, 255, 255, 0.6)" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M5.66683 1.94759C5.11454 1.94759 4.66683 2.39531 4.66683 2.94759V13.0518C4.66683 13.604 5.11454 14.0518 5.66683 14.0518H10.3335C10.8858 14.0518 11.3335 13.604 11.3335 13.0518V2.94759C11.3335 2.39531 10.8858 1.94759 10.3335 1.94759H10.2779L10.1155 2.33723C10.012 2.58564 9.76928 2.74744 9.50016 2.74744H6.50016C6.23105 2.74744 5.98832 2.58564 5.8848 2.33723L5.72242 1.94759H5.66683ZM3.3335 2.94759C3.3335 1.65893 4.37817 0.614258 5.66683 0.614258H10.3335C11.6222 0.614258 12.6668 1.65893 12.6668 2.94759V13.0518C12.6668 14.3404 11.6222 15.3851 10.3335 15.3851H5.66683C4.37816 15.3851 3.3335 14.3404 3.3335 13.0518V2.94759Z"/>
             </svg>
             <a href="tel:4055550128" class="footer-link">(405) 555-0128</a>
           </li>
           <li class="footer-item footer-contacts-item">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="rgba(255, 255, 255, 0.6)" xmlns="http://www.w3.org/2000/svg">
+            <svg width="16" height="16" role="img" aria-hidden="true" aria-label="Send email." focusable="false" viewBox="0 0 16 16" fill="rgba(255, 255, 255, 0.6)" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1668 12.0003V4.66699C15.1668 3.56242 14.2714 2.66699 13.1668 2.66699L2.83349 2.667C1.72893 2.667 0.833496 3.56243 0.833496 4.667V12.0003C0.833496 13.1049 1.72893 14.0003 2.8335 14.0003L13.1668 14.0003C14.2714 14.0003 15.1668 13.1049 15.1668 12.0003ZM13.8335 6.1733V12.0003C13.8335 12.3685 13.535 12.667 13.1668 12.667L2.8335 12.667C2.46531 12.667 2.16683 12.3685 2.16683 12.0003L2.16683 6.17321L6.87561 9.37518C7.55433 9.83671 8.44613 9.83671 9.12485 9.37518L13.8335 6.1733ZM13.8259 4.56607C13.7773 4.24577 13.5007 4.00033 13.1668 4.00033L2.83349 4.00034C2.49965 4.00034 2.22311 4.24573 2.17443 4.56599L7.62535 8.27261C7.85159 8.42646 8.14886 8.42646 8.3751 8.27261L13.8259 4.56607Z"/>
             </svg>              
             <a href="mailto:hello@createx.com" class="footer-link">hello@createx.com</a>
@@ -411,7 +403,7 @@
           <span>© All rights reserved.</span>
           <span>Made with</span>
           <span class="heart">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="16" height="16" role="img" aria-hidden="true" aria-label="Heart." focusable="false" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99974 13.2715C4.9337 11.5252 3.22366 9.78955 2.39675 8.28361C1.55041 6.74228 1.62425 5.4441 2.09389 4.52273C3.05921 2.62892 5.80427 2.02333 7.47678 4.13865L7.9997 4.80001L8.52266 4.13868C10.1955 2.02327 12.9407 2.62896 13.906 4.52273C14.3756 5.44409 14.4494 6.74226 13.603 8.28359C12.776 9.78954 11.0659 11.5252 7.99974 13.2715ZM7.99977 2.73726C5.64696 0.501518 2.17604 1.42555 0.905976 3.91723C0.208948 5.2847 0.199427 7.05212 1.22802 8.92536C2.24749 10.782 4.28009 12.7417 7.67724 14.6194L7.99973 14.7976L8.32222 14.6194C11.7195 12.7417 13.7522 10.782 14.7717 8.92537C15.8004 7.05214 15.7909 5.28472 15.0939 3.91723C13.8238 1.4255 10.3528 0.501552 7.99977 2.73726Z" fill="#FF3F3A"/>
             </svg>            
           </span>

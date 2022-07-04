@@ -883,12 +883,6 @@ body {
   background-image: url("../images/certificate-logo-3.png");
 }
 
-.courses-page-body .certificate-section .section-container {
-  padding: 200px 40px;
-}
-
-
-
 /********************************     Tutors-section      ********************************/
 
 .tutors-section {
@@ -1475,6 +1469,8 @@ body {
 }
 
 .footer-column {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
 }
 
