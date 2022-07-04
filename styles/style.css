@@ -798,6 +798,7 @@ body {
 
 .events-button-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 500px;
@@ -1077,6 +1078,7 @@ body {
   display: block;
   width: 72px;
   height: 72px;
+  grid-area: image;
   border-radius: 50%;
   background-size: 72px 72px;
   background-position: center;

@@ -17,6 +17,40 @@
     transform: scale(0.5);
   }
 
+  .createx-logo {
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+
+  .header-navigation-list {
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+
+  .user-links-wrapper {
+    max-width: 160px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+  }
+
+  .intro-title {
+    max-width: 340px;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .statistics-list {
+    max-width: 340px;
+    margin-top: 60px;
+  }
+
+  .advantages-list {
+    max-width: 340px;
+  }
+
   .courses-list {
     justify-items: center;
   }
@@ -47,6 +81,52 @@
     justify-content: center;
   }
 
+  .benefit-text {
+    max-width: 385px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .events-list {
+    max-width: 375px;
+  }
+
+  .events-card {
+    grid-template-columns: 1fr;
+    grid-template-areas: "day date"
+                         "description description"
+                         "button button";
+  }
+
+  .event-day {
+    grid-area: day;
+  }
+
+  .event-date-wrapper {
+    grid-area: date;
+    align-items: self-end;
+    margin-right: 0;
+  }
+
+  .event-description-wrapper {
+    grid-area: description;
+    margin-bottom: 20px;
+  }
+
+  .events-card .button {
+    grid-area: button;
+  }
+
+  .events-button-wrapper {
+    width: 240px;
+  }
+
+  .events-more-title {
+    margin-bottom: 20px;
+    font-size: 26px;
+    text-align: center;
+  }
+
   .certificate-section .one-columned-container {
     justify-items: center;
   }
@@ -61,8 +141,17 @@
     margin-top: 120px;
   }
 
+  .review-item {
+    padding: 64px 10px;
+  }
+
+  .review-text::before {
+    left: 15px;
+  }
+
   .post-item:not(:last-child) {
     margin-right: 0;
+    margin-bottom: 120px;
   }
 
   .subscribe-section:after {
@@ -76,5 +165,7 @@
 
   .subscribe-input {
     margin-bottom: 24px;
+    margin-right: 0;
+    width: 365px;
   }
 }
