@@ -1,5 +1,9 @@
 @media (max-width: 820px) {
 
+  .button {
+    transform: scale(0.8);
+  }
+
   .section-container {
     padding: 40px 20px;
   }
@@ -152,14 +156,17 @@
     justify-items: center;
   }
 
+  .accreditation-list {
+    gap: 20px;
+  }
+
   .certificate-illustration-container {
-    top: 320px;
-    right: 50%;
-    margin-right: -75%;
+    top: 210px;
+    right: -50%;
   }
 
   .tutors-section {
-    margin-top: 120px;
+    margin-top: 150px;
   }
 
   .review-item {
@@ -175,8 +182,12 @@
   }
 
   .post-item {
-    width: 360px;
+    max-width: 310px;
     align-items: center;
+  }
+
+  .post-param {
+    font-size: 12px;
   }
 
   .post-item:not(:last-child) {
