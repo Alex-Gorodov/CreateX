@@ -834,13 +834,12 @@ body {
 }
 
 .certificate-illustration-container {
-  position: absolute;
-  top: 100px;
-  left: 45%;
   max-width: 705px;
   max-height: 500px;
   padding: 0;
   margin: 0;
+  grid-column: 2;
+  grid-row: 1 / 6;
   z-index: 1;
 }
 
@@ -893,7 +892,7 @@ body {
 /********************************     Tutors-section      ********************************/
 
 .tutors-section {
-  background-color: var(--gray-200);
+  margin-top: -180px;
 }
 
 .tutors-section .section-container {
