@@ -452,6 +452,7 @@ body {
 
 .small-course-card {
   display: flex;
+  max-width: 600px;
   flex-direction: column;
   padding: 32px;
   padding-left: 256px;
@@ -461,11 +462,6 @@ body {
   background-size: 214px 214px;
   background-position: left;
   background-repeat: no-repeat;
-}
-
-.small-course-card {
-  min-height: 214px;
-  max-width: 600px;
 }
 
 .course-card:hover {
