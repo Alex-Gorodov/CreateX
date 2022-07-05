@@ -269,4 +269,8 @@
   .tutor-card:not(:nth-child(1)) {
     display: none;
   }
+
+  .review-item {
+    transform: scale(0.8);
+  }
 }
