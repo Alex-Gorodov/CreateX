@@ -268,6 +268,11 @@
 
 @media (max-width: 560px) {
 
+  .post-item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
   .footer-column:nth-child(2n) {
     align-items: flex-end;
   }
@@ -323,10 +328,5 @@
     max-width: 250px;
   }
 
-  .popa {
-    display: flex;
-    align-items: center;
-    width: 230px;
-    justify-content: space-between;
-  }
+  
 }
