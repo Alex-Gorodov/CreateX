@@ -905,7 +905,7 @@ body {
   grid-column: span 2;
 }
 
-.tutors-card {
+.tutor-card {
   display: flex;
   flex-direction: column;
   border-radius: 4px;
@@ -989,7 +989,7 @@ body {
   color: var(--gray-700);
 }
 
-.tutors-card:nth-child(n + 5) {
+.tutor-card:nth-child(n + 5) {
   display: none;
 }
 
@@ -1014,6 +1014,7 @@ body {
 .reviews-slider-buttons {
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   left: 0;
   display: flex;
   justify-content: space-between;
