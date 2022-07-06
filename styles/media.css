@@ -85,7 +85,7 @@
   }
 
   .course-name {
-    font-size: 20px;
+    font-size: 10px;
     line-height: 24px;
   }
 
@@ -276,6 +276,7 @@
 @media (max-width: 560px) {
 
   .post-item:not(:last-child) {
+    margin-right: 0;
     margin-bottom: 30px;
   }
 
