@@ -379,7 +379,7 @@ body {
 }
 
 .nav-burger .nav-list-opened {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 35vw;
@@ -394,7 +394,7 @@ body {
 
 .nav-list-opened .header-navigation-list {
   flex-direction: column;
-  gap: 10vh;
+  gap: 6vh;
   margin-bottom: 15vh;
 }
 
