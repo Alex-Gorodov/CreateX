@@ -242,7 +242,7 @@
 
 @media (max-width: 750px) {
   .posts-list {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
   
   .post-item {
