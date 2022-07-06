@@ -292,6 +292,7 @@
 @media (max-width: 432px) {
   
   .intro-buttons-list {
+    max-width: 200px;
     flex-direction: column-reverse;
     gap: 20px;
   }
