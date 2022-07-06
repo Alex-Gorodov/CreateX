@@ -1,3 +1,19 @@
+@media (max-width: 1100px) {
+
+  .createx-logo + .header-navigation-list {
+    display: none;
+  }
+
+  .createx-logo + .header-navigation-list + .user-links-wrapper {
+    display: none;
+  }
+
+  .nav-burger {
+    display: block;
+  }
+}
+
+
 @media (max-width: 1020px) {
 
   .section-container {
@@ -34,7 +50,6 @@
   }
 
   .header-logo {
-    margin: 0 auto;
     margin-bottom: 25px;
   }
 
@@ -188,7 +203,7 @@
     top: 55%;
   }
 
-  .posts-list {
+  .blog-list {
     justify-content: start;
     max-width: 650px;
   }
@@ -236,17 +251,24 @@
 }
 
 @media (max-width: 750px) {
-  .posts-list {
+  .nav-burger .nav-list-opened {
+    width: 70vw;
+  }
+
+  .blog-list {
     flex-direction: column;
     justify-content: center;
   }
   
-  .post-item {
+  .post-item:not(:last-child) {
     margin-right: 0;
+    margin-bottom: 30px;
   }
+
 }
 
 @media (max-width: 640px) {
+
   .tutors-list {
     grid-template-columns: 1fr;
   }
@@ -274,11 +296,6 @@
 }
 
 @media (max-width: 560px) {
-
-  .post-item:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
 
   .footer-column:nth-child(2n) {
     align-items: flex-end;

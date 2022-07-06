@@ -43,6 +43,11 @@
   font-display: swap;
 }
 
+@keyframes burger-menu-item {
+  from {transform: translateX(-200px); -webkit-transform: translateX(-200px);}
+  to {transform: translateX(0px); -webkit-transform: translateX(0px);}
+}
+
 /************************************************************************************************
 
                                   Global styles
@@ -77,23 +82,24 @@ body {
   color: var(--gray-800);
 }
 
-/************************************************************************************************
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
-                                  Blocks styles
-
-************************************************************************************************/
+/********************************     Containers styles     ********************************/
 
 .section {
   position: relative;
   padding: 20px;
-}
-
-.gradient-bg {
-  background: var(--section-gradient);
-}
-
-.gray-bg {
-  background: var(--gray-200);
 }
 
 .section-container {
@@ -115,6 +121,16 @@ body {
   column-gap: 0;
 }
 
+.gradient-bg {
+  background: var(--section-gradient);
+}
+
+.gray-bg {
+  background: var(--gray-200);
+}
+
+/********************************     Buttons     ********************************/
+
 .button {
   padding: 0 44px;
   font-weight: 700;
@@ -133,11 +149,28 @@ body {
   color: var(--white);
 }
 
+.filled-btn:hover {
+  box-shadow: 0px 0px 2px black;
+}
+
+.filled-btn:active {
+  box-shadow: inset 0px 0px 8px black;
+}
+
 .unfilled-btn {
   background: none;
   background-color: transparent;
   outline: solid 1px var(--primary-color);
   color: var(--primary-color);
+}
+
+.unfilled-btn:hover {
+  background: var(--btn-gradient);
+  color: var(--white);
+}
+
+.unfilled-btn:active {
+  box-shadow: inset 0px 0px 8px black;
 }
 
 .slider-btn {
@@ -165,11 +198,6 @@ body {
   fill: var(--white);
 }
 
-.unfilled-btn:hover {
-  background: var(--btn-gradient);
-  color: var(--white);
-}
-
 .left-floated-btn {
   justify-self: start;
   align-self: start;
@@ -179,6 +207,8 @@ body {
   justify-self: end;
   align-self: start;
 }
+
+/********************************     Titles      ********************************/
 
 .section-title {
   padding: 0;
@@ -202,19 +232,6 @@ body {
   font-weight: 700;
   align-self: end;
   order: -1;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 /************************************************************************************************
@@ -248,13 +265,17 @@ body {
 .header-navigation-list {
   display: flex;
   flex-wrap: wrap;
-  width: 432px;
+  max-width: 432px;
   justify-content: space-between;
   padding: 0;
   margin: 0;
   margin-right: auto;
   align-items: center;
   list-style-type: none;
+}
+
+.header-navigation-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .header-navigation-link {
@@ -281,19 +302,121 @@ body {
   margin-left: auto;
 }
 
-.user-links-wrapper .header-navigation-link:last-child::before {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
-  background-image: url("../images/Profile.svg");
-  background-size: 20px 20px;
-  background-position: center;
-  background-repeat: no-repeat;
-  transform: translateY(4px);
-
-  content: "";
+.login-btn {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  align-items: center;
 }
+
+/********************************     Burger navigation     ********************************/
+
+.nav-burger {
+  display: none;
+}
+
+.nav-burger {
+  display: none;
+  margin-right: auto;
+}
+
+.burger-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: .1s;
+  z-index: 1000;
+}
+
+.burger-line {
+  display: block;
+  width: 30px;
+  height: 3px;
+  border-radius: 4px;
+  background-color: var(--black);
+  transition: .2s;
+}
+
+.burger-btn:hover .burger-line {
+  background-color: var(--gray-900);
+}
+
+.burger-line:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.burger-open-first-line {
+  position: fixed;
+  top: 26px;
+  right: 25px;
+  transform: rotate(45deg);
+}
+
+.burger-open-second-line {
+  position: fixed;
+  top: 26px;
+  right: 25px;
+  transform: scale(0);
+}
+
+.burger-open-third-line {  
+  position: fixed;
+  top: 26px;
+  right: 25px;
+  transform: rotate(-45deg);
+}
+
+.burger-line {
+  transition: .4s;
+}
+
+.nav-burger .burger-nav-list {
+  display: none;
+  overflow: hidden;
+}
+
+.nav-burger .nav-list-opened {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35vw;
+  height: 100vh;
+  display: flex;
+  padding: 5vh;
+  flex-direction: column;
+  list-style-type: none;
+  z-index: 100;
+  background-color: rgba(30, 33, 44, 0.8);
+}
+
+.nav-list-opened .header-navigation-list {
+  flex-direction: column;
+  gap: 10vh;
+  margin-bottom: 15vh;
+}
+
+.nav-list-opened .header-navigation-item {
+  margin: 0;
+}
+
+.nav-list-opened .header-navigation-link {
+  color: var(--white);
+  font-size: 1.6em;
+}
+
+.nav-list-opened .user-links-wrapper {
+  justify-content: center;
+  gap: 5vh;
+}
+
+.nav-burger .login-btn svg {
+  transform: scale(1.5);
+}
+
+/********************************     End of burger navigation     ********************************/
 
 .play-btn-wrapper {
   display: flex;
@@ -924,6 +1047,7 @@ body {
   padding: 20px;
   padding-bottom: 0;
   background-color: var(--secondary-color);
+  overflow: hidden;
 }
 
 .tutor-social-list {
@@ -948,6 +1072,14 @@ body {
   background-repeat: no-repeat;
   cursor: pointer;
   opacity: 0.6;
+}
+
+.tutor-image-wrapper img {
+  transition: 0.4s;
+}
+
+.tutor-image-wrapper:hover img {
+  transform: translateY(30px);
 }
 
 .tutor-social-item:hover {
@@ -1122,7 +1254,7 @@ body {
 
 /********************************     Blog-section      ********************************/
 
-.posts-list {
+.blog-list {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
