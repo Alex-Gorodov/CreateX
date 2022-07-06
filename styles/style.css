@@ -327,7 +327,7 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  transition: .1s;
+  transition: 0.1s;
   z-index: 1000;
 }
 
@@ -337,7 +337,7 @@ body {
   height: 3px;
   border-radius: 4px;
   background-color: var(--black);
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .burger-btn:hover .burger-line {
@@ -369,27 +369,26 @@ body {
   transform: rotate(-45deg);
 }
 
-.burger-line {
-  transition: .4s;
-}
-
 .nav-burger .burger-nav-list {
   display: none;
   overflow: hidden;
+  transform: translateX(100%);
 }
 
 .nav-burger .nav-list-opened {
   position: fixed;
   top: 0;
   right: 0;
+  display: flex;
   width: 35vw;
   height: 100vh;
-  display: flex;
   padding: 5vh;
-  flex-direction: column;
   list-style-type: none;
-  z-index: 100;
+  flex-direction: column;
   background-color: rgba(30, 33, 44, 0.8);
+  transform: translateX(0);
+  transition: 0.4s linear;
+  z-index: 100;
 }
 
 .nav-list-opened .header-navigation-list {

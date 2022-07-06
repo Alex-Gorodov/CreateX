@@ -20,7 +20,7 @@
     grid-template-columns: 1fr;    
     justify-items: center;
     column-gap: 0;
-    padding: 40px 20px;
+    padding: 10px 20px;
   }
 
   .pretitle {
@@ -47,6 +47,11 @@
 
   .image-container {
     transform: scale(0.5);
+  }
+  
+  .advantages-section .image-container { 
+    margin-top: -120px;
+    margin-bottom: -100px;
   }
 
   .header-logo {
@@ -180,11 +185,14 @@
   }
 
   .tutors-section {
-    margin-top: -220px;
+    margin-top: -200px;
+    padding-top: 80px;
   }
 
   .tutors-list {
     grid-template-columns: repeat(2, 1fr);
+    margin-top: -70px;
+    margin-bottom: -70px;
   }
 
   .reviews-slider {
