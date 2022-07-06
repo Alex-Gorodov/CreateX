@@ -58,10 +58,6 @@
     text-align: center;
   }
 
-  .intro-buttons-list {
-    flex-wrap: wrap;
-  }
-
   .intro-image-container {
     grid-row: 4;
     max-height: 300px;
@@ -293,6 +289,12 @@
 }
 
 @media (max-width: 432px) {
+  
+  .intro-buttons-list {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
 
   .footer-container {
     padding: 20px;
