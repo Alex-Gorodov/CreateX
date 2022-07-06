@@ -60,7 +60,6 @@
 
   .intro-buttons-list {
     flex-wrap: wrap;
-    justify-content: center;
   }
 
   .intro-image-container {
