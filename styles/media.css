@@ -194,11 +194,16 @@
   }
 
   .posts-list {
-    justify-content: center;
+    justify-content: start;
+    max-width: 650px;
   }
 
   .post-item {
     max-width: 310px;
+  }
+
+  .post-item:nth-child(2n) {
+    margin-right: 0;
   }
 
   .post-parameters {
