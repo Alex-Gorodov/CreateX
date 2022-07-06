@@ -412,8 +412,12 @@ body {
   gap: 5vh;
 }
 
+.nav-burger .login-btn {
+  font-size: 1em;
+}
+
 .nav-burger .login-btn svg {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 /********************************     End of burger navigation     ********************************/
