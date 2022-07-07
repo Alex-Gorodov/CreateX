@@ -1,6 +1,9 @@
 .course-page-body .page-header {
-  background: var(--section-gradient);
-  padding: 20px 40px;
+  padding: 20px;
+}
+
+.course-page-body .header-navigation {
+  display: flex;
 }
 
 .course-page-intro {

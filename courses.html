@@ -12,7 +12,7 @@
 <body class="courses-page-body">
   <header>
     <nav class="header-navigation page-header">
-      <a href="index.html" class="createx-logo header-logo">
+      <a href="index" class="createx-logo header-logo">
         <svg width="130" height="22" role="img" aria-hidden="true" aria-label="CreateX logo." focusable="false" viewBox="0 0 130 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_25855_1583)">
           <path d="M0 11.0998C0 4.9998 3.3 1.2998 8.7 1.2998C12.8 1.2998 16.1 3.7998 16.7 7.4998C16.8 7.8998 16.5 8.1998 16.1 8.1998H13.5C13.2 8.1998 13 7.9998 12.9 7.6998C12.4 5.7998 10.8 4.5998 8.7 4.5998C5.8 4.5998 4 7.0998 4 11.0998C4 15.0998 5.8 17.5998 8.8 17.5998C10.9 17.5998 12.4 16.4998 13 14.6998C13.1 14.3998 13.3 14.1998 13.6 14.1998H16.2C16.6 14.1998 16.9 14.5998 16.8 14.8998C16.2 18.4998 13 20.8998 8.8 20.8998C3.3 20.8998 0 17.0998 0 11.0998Z" fill="#1E212C"/>
@@ -50,7 +50,49 @@
       </ul>
       <div class="user-links-wrapper">
         <a href="#" class="button filled-btn">Get consultation</a>
-        <a href="#" class="header-navigation-link">Log in / Register</a>
+        <a href="#" class="header-navigation-link login-btn">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0002 2.70866C8.38936 2.70866 7.08353 4.0145 7.08353 5.62533C7.08353 7.23616 8.38936 8.54199 10.0002 8.54199C11.611 8.54199 12.9169 7.23616 12.9169 5.62533C12.9169 4.0145 11.611 2.70866 10.0002 2.70866ZM5.41686 5.62533C5.41686 3.09402 7.46889 1.04199 10.0002 1.04199C12.5315 1.04199 14.5835 3.09402 14.5835 5.62533C14.5835 8.15663 12.5315 10.2087 10.0002 10.2087C7.46889 10.2087 5.41686 8.15663 5.41686 5.62533Z" fill="#424551"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.08691 12.7087C4.50914 12.7087 4.05755 12.99 3.87424 13.3942C3.62053 13.9536 3.39078 14.6196 3.33656 15.2513C3.31233 15.5337 3.43006 15.7418 3.5923 15.8426C4.44993 16.3753 6.43719 17.292 10.0002 17.292C13.5632 17.292 15.5505 16.3753 16.4081 15.8426C16.5703 15.7418 16.6881 15.5337 16.6638 15.2513C16.6096 14.6196 16.3799 13.9536 16.1261 13.3942C15.9428 12.99 15.4912 12.7087 14.9135 12.7087H5.08691ZM2.35639 12.7058C2.86301 11.5887 3.99428 11.042 5.08691 11.042H14.9135C16.0061 11.042 17.1374 11.5887 17.644 12.7058C17.935 13.3474 18.2472 14.2099 18.3244 15.1088C18.3946 15.9273 18.0544 16.7819 17.2876 17.2583C16.1596 17.959 13.8665 18.9587 10.0002 18.9587C6.13386 18.9587 3.84078 17.959 2.71283 17.2583C1.94595 16.7819 1.60575 15.9273 1.676 15.1088C1.75315 14.2099 2.0654 13.3474 2.35639 12.7058Z"/>
+          </svg>
+          Log in / Register
+        </a>
+      </div>
+      <div class="nav-burger">
+        <button class="burger-btn" onclick="burgerOpen()">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+        <div class="burger-nav-list">
+          <ul class="header-navigation-list">
+            <li class="header-navigation-item">
+              <a href="#" class="header-navigation-link">About Us</a>
+            </li>
+            <li class="header-navigation-item">
+              <a href="courses.html" class="header-navigation-link">Courses</a>
+            </li>
+            <li class="header-navigation-item">
+              <a href="#" class="header-navigation-link">Events</a>
+            </li>
+            <li class="header-navigation-item">
+              <a href="#" class="header-navigation-link">Blog</a>
+            </li>
+            <li class="header-navigation-item">
+              <a href="#" class="header-navigation-link">Contacts</a>
+            </li>
+          </ul>
+          <div class="user-links-wrapper">
+            <a href="#" class="button filled-btn">Get consultation</a>
+            <a href="#" class="header-navigation-link login-btn">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0002 2.70866C8.38936 2.70866 7.08353 4.0145 7.08353 5.62533C7.08353 7.23616 8.38936 8.54199 10.0002 8.54199C11.611 8.54199 12.9169 7.23616 12.9169 5.62533C12.9169 4.0145 11.611 2.70866 10.0002 2.70866ZM5.41686 5.62533C5.41686 3.09402 7.46889 1.04199 10.0002 1.04199C12.5315 1.04199 14.5835 3.09402 14.5835 5.62533C14.5835 8.15663 12.5315 10.2087 10.0002 10.2087C7.46889 10.2087 5.41686 8.15663 5.41686 5.62533Z"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.08691 12.7087C4.50914 12.7087 4.05755 12.99 3.87424 13.3942C3.62053 13.9536 3.39078 14.6196 3.33656 15.2513C3.31233 15.5337 3.43006 15.7418 3.5923 15.8426C4.44993 16.3753 6.43719 17.292 10.0002 17.292C13.5632 17.292 15.5505 16.3753 16.4081 15.8426C16.5703 15.7418 16.6881 15.5337 16.6638 15.2513C16.6096 14.6196 16.3799 13.9536 16.1261 13.3942C15.9428 12.99 15.4912 12.7087 14.9135 12.7087H5.08691ZM2.35639 12.7058C2.86301 11.5887 3.99428 11.042 5.08691 11.042H14.9135C16.0061 11.042 17.1374 11.5887 17.644 12.7058C17.935 13.3474 18.2472 14.2099 18.3244 15.1088C18.3946 15.9273 18.0544 16.7819 17.2876 17.2583C16.1596 17.959 13.8665 18.9587 10.0002 18.9587C6.13386 18.9587 3.84078 17.959 2.71283 17.2583C1.94595 16.7819 1.60575 15.9273 1.676 15.1088C1.75315 14.2099 2.0654 13.3474 2.35639 12.7058Z"/>
+              </svg>
+              Log in / Register
+            </a>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
@@ -413,5 +455,6 @@
       </div>
     </div>
   </footer>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
