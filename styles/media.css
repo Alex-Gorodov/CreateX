@@ -108,7 +108,8 @@
   }
   
   .small-course-card {
-    max-width: 350px;
+    width: 350px;
+    height: 140px;
     padding: 15px 10px;
     gap: 5px;
     padding-left: 180px;

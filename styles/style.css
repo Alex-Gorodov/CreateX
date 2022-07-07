@@ -378,7 +378,7 @@ body {
   background-color: rgba(30, 33, 44, 0.8);
   overflow: hidden;
   transform: translateX(200%);
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 .nav-burger .nav-list-opened {
