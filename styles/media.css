@@ -8,6 +8,12 @@
     display: none;
   }
 
+  .header-navigation {
+    position: fixed;
+    background: #ffded5;
+    z-index: 10;
+  }
+
   .nav-burger {
     display: block;
   }
@@ -19,16 +25,29 @@
 
   .image-container {
     transform: scale(0.5);
+  }  
+  
+  .header-navigation-list {
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+
+  .user-links-wrapper {
+    max-width: 160px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
   }
 }
 
 
 @media (max-width: 1020px) {
 
-  .header-navigation {
-    position: fixed;
-    background: #ffded5;
-    z-index: 10;
+  .course-info-wrapper {
+    grid-row-end: 6;
+    grid-row: auto;
+    margin-top: 20px;
   }
 
   .header-navigation + .section {
@@ -67,19 +86,6 @@
   .advantages-section .image-container { 
     margin-top: -120px;
     margin-bottom: -100px;
-  }
-
-  .header-navigation-list {
-    margin: 0 auto;
-    margin-bottom: 15px;
-  }
-
-  .user-links-wrapper {
-    max-width: 160px;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 10px;
   }
 
   .intro-title {
@@ -204,7 +210,7 @@
   .tutors-list {
     grid-template-columns: repeat(2, 1fr);
     margin-top: -70px;
-    margin-bottom: -70px;
+    margin-bottom: -50px;
   }
 
   .reviews-slider {
@@ -378,6 +384,4 @@
   .copyright {
     max-width: 250px;
   }
-
-  
 }

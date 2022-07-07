@@ -2,8 +2,17 @@
   padding: 20px;
 }
 
+.course-page-body header {
+  background: var(--section-gradient);
+
+}
+
 .course-page-body .header-navigation {
   display: flex;
+}
+
+.course-page-body .header-navigation + .section {
+  margin-top: 50px;    
 }
 
 .course-page-intro {
