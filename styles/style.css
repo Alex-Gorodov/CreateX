@@ -16,6 +16,7 @@
   --secondary-color: #ffcf2d;
 
   --section-gradient: linear-gradient(55.95deg, rgba(255, 63, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%);
+  --section-gradient-no-opacity:  linear-gradient(55.95deg, rgb(255, 63, 58) 0%, rgb(247, 94, 5) 100%);
   --btn-gradient: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
 }
 

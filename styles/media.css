@@ -21,6 +21,16 @@
 
 @media (max-width: 1020px) {
 
+  .header-navigation {
+    position: fixed;
+    background: #ffded5;
+    z-index: 10;
+  }
+
+  .header-navigation + .section {
+    margin-top: 50px;
+  }
+
   .section-container {
     grid-template-columns: 1fr;    
     justify-items: center;
@@ -57,10 +67,6 @@
   .advantages-section .image-container { 
     margin-top: -120px;
     margin-bottom: -100px;
-  }
-
-  .header-logo {
-    margin-bottom: 25px;
   }
 
   .header-navigation-list {
