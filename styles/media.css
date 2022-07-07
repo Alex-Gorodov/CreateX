@@ -11,6 +11,11 @@
   .nav-burger {
     display: block;
   }
+
+  .nav-burger .burger-nav-list {
+    width: 35vw;
+    flex-direction: column;
+  }
 }
 
 
