@@ -1025,6 +1025,10 @@ body {
   grid-column: span 2;
 }
 
+.tutors-slider-buttons {
+  display: flex;
+}
+
 .tutor-card {
   display: flex;
   flex-direction: column;
@@ -1120,10 +1124,6 @@ body {
 
 .tutor-card:nth-child(n + 5) {
   display: none;
-}
-
-.tutors-slider-buttons {
-  display: flex;
 }
 
 /********************************     Reviews-section      ********************************/
