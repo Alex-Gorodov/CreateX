@@ -17,11 +17,3 @@ function burgerOpen() {
     secondLine.classList.toggle("burger-open-second-line");
     thirdLine.classList.toggle("burger-open-third-line");
 }
-
-
-
-// let tutors = Array.from(document.querySelectorAll(".tutors-card"));
-
-// let tutorsPrev = document.querySelector(".swiper-button-prev");
-// let tutorsNext = document.querySelector(".swiper-button-next");
-

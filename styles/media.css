@@ -220,7 +220,7 @@
 
   .tutors-list {
     grid-template-columns: repeat(2, 1fr);
-    margin-top: -70px;
+    margin-top: -30px;
     margin-bottom: -50px;
   }
 
