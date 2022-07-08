@@ -101,7 +101,18 @@
   }
 
   .statistics-list {
-    max-width: 260px;
+    max-width: 280px;
+  }
+
+  .statistics-item {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    width: 280px;
+    justify-content: space-between;
+  }
+
+  .statistics-number {
+    justify-self: end;
   }
 
   .advantages-list {
