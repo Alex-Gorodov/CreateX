@@ -44,6 +44,10 @@
 
 @media (max-width: 1020px) {
 
+  .courses-page-body .page-header {
+    margin-bottom: 30px;
+  }
+
   .course-info-wrapper {
     grid-row-end: 6;
     grid-row: auto;
@@ -284,6 +288,37 @@
     margin: 0 auto;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media (max-width: 840px) {
+
+  .filters-wrapper {
+    grid-auto-flow: dense;
+    margin: 20px auto;
+    justify-content: center;
+    row-gap: 20px;
+  }
+
+  .search-form {
+    grid-row: 1 / 2;
+  }
+
+  .filters-list {
+    max-width: 250px;
+    justify-content: center;
+  }
+
+  .filter-item {
+    width: 100%;
+  }
+  
+  .filter-item .button {
+    width: 100%;
+  }
+
+  .form-input {
+    width: 100%;
   }
 }
 
