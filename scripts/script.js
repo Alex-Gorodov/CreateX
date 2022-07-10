@@ -17,3 +17,39 @@ function burgerOpen() {
     secondLine.classList.toggle("burger-open-second-line");
     thirdLine.classList.toggle("burger-open-third-line");
 }
+
+let tutors = document.getElementsByClassName("tutor-card");
+let next = document.querySelector(".slider-btn-next");
+let prev = document.querySelector(".slider-btn-prev");
+let i = 0;
+let arLength = tutors.length;
+
+console.log(arLength);
+
+next.addEventListener("click", moveRight);
+
+function moveRight() {
+    if(i == arLength-1){
+            tutors[0].style.display = "block";
+            tutors[i].style.display = "none";
+            i = 0;
+        } else{
+            tutors[i+1].style.display = "block";
+            tutors[i].style.display = "none";
+            i++;
+        }
+}
+
+prev.addEventListener("click", moveLeft);
+
+function moveLeft() {
+    if(i == 0){
+        tutors[arLength-1].style.display = "block";
+        tutors[i].style.display = "none";
+        i = arLength-1;
+    } else{
+        tutors[i-1].style.display = "block";
+        tutors[i].style.display = "none";
+        i--;
+    }
+}
