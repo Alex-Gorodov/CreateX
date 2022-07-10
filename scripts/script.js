@@ -24,11 +24,12 @@ let prev = document.querySelector(".slider-btn-prev");
 let i = 0;
 let arLength = tutors.length;
 
-console.log(arLength);
+let ww = window.innerWidth;
 
 next.addEventListener("click", moveRight);
 
 function moveRight() {
+  if (ww <= 800) {
     if(i == arLength-1){
             tutors[0].style.display = "block";
             tutors[i].style.display = "none";
@@ -38,11 +39,13 @@ function moveRight() {
             tutors[i].style.display = "none";
             i++;
         }
+  }   
 }
 
 prev.addEventListener("click", moveLeft);
 
 function moveLeft() {
+  if (ww <= 800) {
     if(i == 0){
         tutors[arLength-1].style.display = "block";
         tutors[i].style.display = "none";
@@ -52,4 +55,5 @@ function moveLeft() {
         tutors[i].style.display = "none";
         i--;
     }
+  }
 }
