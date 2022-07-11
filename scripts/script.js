@@ -31,11 +31,11 @@ next.addEventListener("click", moveRight);
 function moveRight() {
   if (ww <= 800) {
     if(i == arLength-1){
-            tutors[0].style.display = "block";
+            tutors[0].style.display = "flex";
             tutors[i].style.display = "none";
             i = 0;
         } else{
-            tutors[i+1].style.display = "block";
+            tutors[i+1].style.display = "flex";
             tutors[i].style.display = "none";
             i++;
         }
@@ -47,11 +47,11 @@ prev.addEventListener("click", moveLeft);
 function moveLeft() {
   if (ww <= 800) {
     if(i == 0){
-        tutors[arLength-1].style.display = "block";
+        tutors[arLength-1].style.display = "flex";
         tutors[i].style.display = "none";
         i = arLength-1;
     } else{
-        tutors[i-1].style.display = "block";
+        tutors[i-1].style.display = "flex";
         tutors[i].style.display = "none";
         i--;
     }
