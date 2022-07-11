@@ -310,6 +310,7 @@ body {
 .nav-burger {
   display: none;
   margin-right: auto;
+
 }
 
 .burger-btn {
@@ -380,6 +381,7 @@ body {
 .nav-burger .nav-list-opened {
   transform: translateX(0);
   z-index: 100;
+  overflow: auto;
 }
 
 .burger-nav-list .header-navigation-list {
