@@ -22,10 +22,6 @@
     width: 35vw;
     flex-direction: column;
   }
-
-  .image-container {
-    transform: scale(0.5);
-  }  
   
   .header-navigation-list {
     margin: 0 auto;
@@ -41,6 +37,11 @@
   }
 }
 
+@media (min-width: 1021px) {
+  .accreditation-list {
+    margin-bottom: 120px;
+  }
+}
 
 @media (max-width: 1020px) {
 
@@ -85,11 +86,6 @@
     margin-top: -40px;
     margin-bottom: 40px;
     grid-row: 3;
-  }
-  
-  .advantages-section .image-container { 
-    margin-top: -120px;
-    margin-bottom: -100px;
   }
 
   .intro-title {
@@ -164,6 +160,10 @@
     max-width: 300px;
   }
 
+  .benefit-image-container {
+    justify-self: center;
+  }
+
   .events-list {
     max-width: 375px;
   }
@@ -208,7 +208,6 @@
   }
 
   .certificate-illustration-container {
-    margin-top: -110px;
     grid-column: 1;
     grid-row: 5;
   }
@@ -218,7 +217,7 @@
   }
 
   .tutors-section {
-    margin-top: -200px;
+    margin-top: -100px;
     padding-top: 80px;
   }
 
