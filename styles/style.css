@@ -386,11 +386,11 @@ body {
 
 .burger-nav-list .header-navigation-list {
   flex-direction: column;
-  gap: 6vh;
   margin-bottom: 15vh;
 }
 
 .burger-nav-list .header-navigation-item:not(:last-child) {
+  margin-bottom: 6vh;
   -webkit-margin-after: 6vh;
 }
 
