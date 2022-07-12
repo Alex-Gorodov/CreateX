@@ -323,7 +323,8 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  transition: 0.1s;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
   z-index: 1000;
 }
 
@@ -334,6 +335,7 @@ body {
   border-radius: 4px;
   background-color: var(--black);
   transition: 0.2s;
+  -webkit-transition: 0.2s;
 }
 
 .burger-btn:hover .burger-line {
