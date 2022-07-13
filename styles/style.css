@@ -1691,8 +1691,13 @@ body {
 .copyright-love {
   display: flex;
   align-items: center;
-  width: 230px;
+  width: 150px;
   justify-content: space-between;
+}
+
+.footer-developer-link {
+  color: var(--white);
+  text-decoration: dashed underline;
 }
 
 .footer-to-top {
