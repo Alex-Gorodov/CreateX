@@ -829,6 +829,7 @@ body {
 .benefits-buttons-item .button {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .benefits-buttons-item svg {
@@ -865,6 +866,10 @@ body {
   line-height: 41.6px;
   font-weight: 900;
   color: var(--gray-900);
+}
+
+.benefits-select {
+  display: none;
 }
 
 .benefit-image-container {

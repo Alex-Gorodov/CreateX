@@ -290,6 +290,85 @@
   }
 }
 
+@media (max-width: 980px) and (min-width: 880px) {
+  .benefits-section .section-container {
+    grid-template-areas: "pretitle pretitle pretitle"
+                         "title title title"
+                         "list item item"
+                         "list item item"
+                         "list item item"
+                         "list item item";
+  }
+
+  .benefits-section .pretitle {
+    grid-area: pretitle;
+  }
+
+  .benefits-section .section-title {
+    grid-area: title;
+  }
+
+  .benefits-buttons-list {
+    grid-area: list;
+    height: 80%;
+  }
+
+  .benefits-buttons-item {
+    width: 100%;
+  }
+
+  .benefits-buttons-item .button {
+    text-align: center;
+    width: 100%;
+  }
+
+  .active-benefit-item {
+    grid-area: item;
+  }
+}
+
+@media (max-width: 879px) {
+  .benefits-section .section-container {
+    grid-template-areas: "pretitle"
+                         "title"
+                         "list"
+                         "item";
+  }
+
+  .benefits-section .section-title {
+    margin-bottom: 30px;
+  }
+
+  .benefits-buttons-list {
+    display: none;
+  }
+
+  .benefits-select {
+    display: block;
+    grid-area: list;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+
+    background: none;
+    border-radius: 8px;
+    background-color: transparent;
+    border: solid 1px var(--primary-color);
+    color: var(--primary-color);
+    appearance: none;
+
+    background-image: url("../images/sort-triangle.svg");
+    background-size: 9px 16px;
+    background-position: 95% center;
+    background-repeat: no-repeat;
+  }
+
+  .benefits-select:active,
+  .benefits-select:focus-visible {
+    outline: solid 1px var(--primary-color);
+  }
+
+}
+
 @media (max-width: 840px) {
 
   .filters-wrapper {

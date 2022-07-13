@@ -38,15 +38,21 @@ function handleClick(e) {
   }
 }
 
-// return to console name of a course that badge mathes with clicked button
+// array for results
+let result = [];
+
+// building array of results
 for (let n = 0; n < coursesList.length; n++) {
   courseButtons[n].onclick = function () {
-      for (let j = 0; j < coursesList.length; j++) {
-        if ((courseButtons[n].textContent.substring(0, 5)).match(coursesList[j].type.substring(0, 5))) {
-          console.log(coursesList[j].name);
-        }
-      
+    for (let j = 0; j < coursesList.length; j++) {
+      if ((courseButtons[n].textContent.substring(0, 5)).match(coursesList[j].type.substring(0, 5))) {
+        result.push(coursesList[j]);
+        console.log(result);
+      }
     }
   };
+  //
+  if (result.length > 0) {
+    coursesList.classList.add("visually-hidden"); 
+  }
 }
-
