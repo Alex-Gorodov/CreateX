@@ -475,6 +475,7 @@ body {
 
 .intro-illustration {
   width: 31.25vw;
+  min-width: 310px;
   height: auto;
 }
 
@@ -562,6 +563,7 @@ body {
 
 .advantages-image {
   width: 36.7vw;
+  min-width: 320px;
   height: auto;
 }
 
@@ -880,6 +882,7 @@ body {
 
 .benefit-illustration {
   width: 31.25vw;
+  min-width: 310px;
   height: auto;
   margin: auto;
 }
