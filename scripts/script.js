@@ -32,14 +32,14 @@ nextTutor.addEventListener("click", moveRight);
 function moveRight() {
   if (ww <= 800) {
     if(i == arTutorsLength-1){
-            tutors[0].style.display = "flex";
-            tutors[i].style.display = "none";
-            i = 0;
-        } else{
-            tutors[i+1].style.display = "flex";
-            tutors[i].style.display = "none";
-            i++;
-        }
+      tutors[0].style.display = "flex";
+      tutors[i].style.display = "none";
+      i = 0;
+    } else {
+      tutors[i+1].style.display = "flex";
+      tutors[i].style.display = "none";
+      i++;
+    }
   }   
 }
 
@@ -48,13 +48,13 @@ prevTutor.addEventListener("click", moveLeft);
 function moveLeft() {
   if (ww <= 800) {
     if(i == 0){
-        tutors[arTutorsLength-1].style.display = "flex";
-        tutors[i].style.display = "none";
-        i = arTutorsLength-1;
-    } else{
-        tutors[i-1].style.display = "flex";
-        tutors[i].style.display = "none";
-        i--;
+      tutors[arTutorsLength-1].style.display = "flex";
+      tutors[i].style.display = "none";
+      i = arTutorsLength-1;
+    } else {
+      tutors[i-1].style.display = "flex";
+      tutors[i].style.display = "none";
+      i--;
     }
   }
 }
@@ -89,38 +89,38 @@ for (let i = 0; i < reviewPagination.length; i++) {
 nextReview.addEventListener("click", moveRightReview);
 
 function moveRightReview() {
-    if(j == arReviewsLength-1){
-            reviews[0].classList.add("review-active");
-            reviews[j].classList.remove("review-active");
-            reviewPagination[j].classList.remove("active-slide");
-            reviewPagination[0].classList.add("active-slide");
-            j = 0;
-        } else{
-            reviews[j].classList.remove("review-active");
-            reviews[j+1].classList.add("review-active");
-            reviewPagination[j].classList.remove("active-slide");
-            reviewPagination[j+1].classList.add("active-slide");
-            j++;
-        }
+    if(j == arReviewsLength-1) {
+      reviews[0].classList.add("review-active");
+      reviews[j].classList.remove("review-active");
+      reviewPagination[j].classList.remove("active-slide");
+      reviewPagination[0].classList.add("active-slide");
+      j = 0;
+    } else {
+      reviews[j].classList.remove("review-active");
+      reviews[j+1].classList.add("review-active");
+      reviewPagination[j].classList.remove("active-slide");
+      reviewPagination[j+1].classList.add("active-slide");
+      j++;
+    }
 
 }
 
 prevReview.addEventListener("click", moveLeftReview);
 
 function moveLeftReview() {
-    if(j == 0){
-        reviews[j].classList.remove("review-active");
-        reviews[arReviewsLength-1].classList.add("review-active");
+    if(j == 0) {
+      reviews[j].classList.remove("review-active");
+      reviews[arReviewsLength-1].classList.add("review-active");
 
-        reviewPagination[j].classList.remove("active-slide");
-        reviewPagination[reviewPagination.length-1].classList.add("active-slide");
-        j = arReviewsLength-1;
-    } else{
-        reviews[j].classList.remove("review-active");
-        reviews[j-1].classList.add("review-active");
+      reviewPagination[j].classList.remove("active-slide");
+      reviewPagination[reviewPagination.length-1].classList.add("active-slide");
+      j = arReviewsLength-1;
+    } else {
+      reviews[j].classList.remove("review-active");
+      reviews[j-1].classList.add("review-active");
 
-        reviewPagination[j].classList.remove("active-slide");
-        reviewPagination[j-1].classList.add("active-slide");
-        j--;
+      reviewPagination[j].classList.remove("active-slide");
+      reviewPagination[j-1].classList.add("active-slide");
+      j--;
     }
 }
