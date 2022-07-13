@@ -59,7 +59,6 @@ function moveLeft() {
   }
 }
 
-
 // Reviews slider
 let reviews = document.getElementsByClassName("review-item");
 let prevReview = document.querySelector(".review-prev");
@@ -69,20 +68,36 @@ let arReviewsLength = reviews.length;
 
 let reviewPagination = document.querySelectorAll(".pagination-btn");
 
-console.log(reviewPagination.length);
+for (let i = 0; i < reviewPagination.length; i++) {
+    reviewPagination[i].onclick = function () {
+      if (reviewPagination[i].classList.contains("active-slide")) {
+        return;
+      } else { 
+        for (let n = 0; n < reviews.length; n++) {
+          if (reviewPagination[n].classList.contains("active-slide")) {
+            reviewPagination[n].classList.remove("active-slide");
+            reviews[n].classList.remove("review-active");
+            reviewPagination[i].classList.add("active-slide");
+            reviews[i].classList.add("review-active");
+          }
+        }
+      }
+    };
+}
+
 
 nextReview.addEventListener("click", moveRightReview);
 
 function moveRightReview() {
     if(j == arReviewsLength-1){
-            reviews[0].style.display = "flex";
-            reviews[j].style.display = "none";
+            reviews[0].classList.add("review-active");
+            reviews[j].classList.remove("review-active");
             reviewPagination[j].classList.remove("active-slide");
             reviewPagination[0].classList.add("active-slide");
             j = 0;
         } else{
-            reviews[j+1].style.display = "flex";
-            reviews[j].style.display = "none";
+            reviews[j].classList.remove("review-active");
+            reviews[j+1].classList.add("review-active");
             reviewPagination[j].classList.remove("active-slide");
             reviewPagination[j+1].classList.add("active-slide");
             j++;
@@ -94,15 +109,15 @@ prevReview.addEventListener("click", moveLeftReview);
 
 function moveLeftReview() {
     if(j == 0){
-        reviews[arReviewsLength-1].style.display = "flex";
-        reviews[j].style.display = "none";
+        reviews[j].classList.remove("review-active");
+        reviews[arReviewsLength-1].classList.add("review-active");
 
         reviewPagination[j].classList.remove("active-slide");
         reviewPagination[reviewPagination.length-1].classList.add("active-slide");
         j = arReviewsLength-1;
     } else{
-        reviews[j-1].style.display = "flex";
-        reviews[j].style.display = "none";
+        reviews[j].classList.remove("review-active");
+        reviews[j-1].classList.add("review-active");
 
         reviewPagination[j].classList.remove("active-slide");
         reviewPagination[j-1].classList.add("active-slide");

@@ -1257,10 +1257,6 @@ body {
   background-image: url("../images/reviewer-5.png");
 }
 
-.review-item:nth-child(6) .reviewer-container::before {
-  background-image: url("../images/reviewer-6.png");
-}
-
 .reviewer-name {
   font-weight: 700;
   color: var(--gray-900);
