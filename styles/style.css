@@ -1237,8 +1237,28 @@ body {
   content: "";
 }
 
-.reviewer-container:first-of-type::before {
+.review-item:nth-child(1) .reviewer-container::before {
   background-image: url("../images/reviewer-1.png");
+}
+
+.review-item:nth-child(2) .reviewer-container::before {
+  background-image: url("../images/reviewer-2.png");
+}
+
+.review-item:nth-child(3) .reviewer-container::before {
+  background-image: url("../images/reviewer-3.png");
+}
+
+.review-item:nth-child(4) .reviewer-container::before {
+  background-image: url("../images/reviewer-4.png");
+}
+
+.review-item:nth-child(5) .reviewer-container::before {
+  background-image: url("../images/reviewer-5.png");
+}
+
+.review-item:nth-child(6) .reviewer-container::before {
+  background-image: url("../images/reviewer-6.png");
 }
 
 .reviewer-name {

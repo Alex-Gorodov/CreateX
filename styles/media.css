@@ -63,6 +63,7 @@
     grid-template-columns: 1fr;    
     justify-items: center;
     column-gap: 0;
+    row-gap: 30px;
     padding: 10px 20px;
   }
 
@@ -102,6 +103,7 @@
 
   .statistics-list {
     max-width: 280px;
+    margin-top: 0;
   }
 
   .statistics-item {
@@ -158,6 +160,11 @@
 
   .benefit-text p {
     max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .benefits-item-wrapper {
+    row-gap: 30px;
   }
 
   .benefit-image-container {
@@ -195,6 +202,7 @@
 
   .events-button-wrapper {
     width: 240px;
+    justify-content: center;
   }
 
   .events-more-title {
@@ -446,7 +454,17 @@
 }
 
 @media (max-width: 560px) {
+  .benefits-item-wrapper .subtitle {
+    margin-bottom: 20px;
+  }
 
+  .benefit-text p {
+    text-align: justify;
+  }
+
+  .reviews-section .section-title {
+    margin: 0;
+  }
   .footer-column:nth-child(2n) {
     align-items: flex-end;
   }

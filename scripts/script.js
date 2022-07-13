@@ -18,19 +18,20 @@ function burgerOpen() {
     thirdLine.classList.toggle("burger-open-third-line");
 }
 
+// Tutors slider
 let tutors = document.getElementsByClassName("tutor-card");
-let next = document.querySelector(".slider-btn-next");
-let prev = document.querySelector(".slider-btn-prev");
+let nextTutor = document.querySelector(".slider-btn-next");
+let prevTutor = document.querySelector(".slider-btn-prev");
 let i = 0;
-let arLength = tutors.length;
+let arTutorsLength = tutors.length;
 
 let ww = window.innerWidth;
 
-next.addEventListener("click", moveRight);
+nextTutor.addEventListener("click", moveRight);
 
 function moveRight() {
   if (ww <= 800) {
-    if(i == arLength-1){
+    if(i == arTutorsLength-1){
             tutors[0].style.display = "flex";
             tutors[i].style.display = "none";
             i = 0;
@@ -42,18 +43,69 @@ function moveRight() {
   }   
 }
 
-prev.addEventListener("click", moveLeft);
+prevTutor.addEventListener("click", moveLeft);
 
 function moveLeft() {
   if (ww <= 800) {
     if(i == 0){
-        tutors[arLength-1].style.display = "flex";
+        tutors[arTutorsLength-1].style.display = "flex";
         tutors[i].style.display = "none";
-        i = arLength-1;
+        i = arTutorsLength-1;
     } else{
         tutors[i-1].style.display = "flex";
         tutors[i].style.display = "none";
         i--;
     }
   }
+}
+
+
+// Reviews slider
+let reviews = document.getElementsByClassName("review-item");
+let prevReview = document.querySelector(".review-prev");
+let nextReview = document.querySelector(".review-next");
+let j = 0;
+let arReviewsLength = reviews.length;
+
+let reviewPagination = document.querySelectorAll(".pagination-btn");
+
+console.log(reviewPagination.length);
+
+nextReview.addEventListener("click", moveRightReview);
+
+function moveRightReview() {
+    if(j == arReviewsLength-1){
+            reviews[0].style.display = "flex";
+            reviews[j].style.display = "none";
+            reviewPagination[j].classList.remove("active-slide");
+            reviewPagination[0].classList.add("active-slide");
+            j = 0;
+        } else{
+            reviews[j+1].style.display = "flex";
+            reviews[j].style.display = "none";
+            reviewPagination[j].classList.remove("active-slide");
+            reviewPagination[j+1].classList.add("active-slide");
+            j++;
+        }
+
+}
+
+prevReview.addEventListener("click", moveLeftReview);
+
+function moveLeftReview() {
+    if(j == 0){
+        reviews[arReviewsLength-1].style.display = "flex";
+        reviews[j].style.display = "none";
+
+        reviewPagination[j].classList.remove("active-slide");
+        reviewPagination[reviewPagination.length-1].classList.add("active-slide");
+        j = arReviewsLength-1;
+    } else{
+        reviews[j-1].style.display = "flex";
+        reviews[j].style.display = "none";
+
+        reviewPagination[j].classList.remove("active-slide");
+        reviewPagination[j-1].classList.add("active-slide");
+        j--;
+    }
 }
