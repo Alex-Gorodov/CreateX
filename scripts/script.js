@@ -124,3 +124,23 @@ function moveLeftReview() {
       j--;
     }
 }
+
+// Parallax
+const parallaxElements = document.querySelectorAll('.parallax');
+
+const parallax = elements => {
+  if ('undefined' !== elements && elements.length > 0) {
+    elements.forEach(element => {
+      let y = window.innerHeight - element.getBoundingClientRect().top;
+      if (y > 0) {
+        element.style.transform = 'translate3d(0, ' + (0.28 * y) + 'px, 0)';
+      }
+    });
+  }
+};
+
+parallax(parallaxElements);
+
+window.onscroll = () => {
+  parallax(parallaxElements);
+};
