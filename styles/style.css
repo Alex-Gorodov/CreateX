@@ -147,7 +147,7 @@ body {
   right: 10vw;
   width: 110px;
   height: 110px;
-  background-image: url("/images/textures/shapes.svg");
+  background-image: url("../images/textures/shapes.svg");
 }
 
 .parallax:nth-child(2) {
@@ -155,7 +155,7 @@ body {
   left: 40vw;
   width: 110px;
   height: 110px;
-  background-image: url("/images/textures/shapes-1.svg");
+  background-image: url("../images/textures/shapes-1.svg");
 }
 
 .parallax:nth-child(3) {
@@ -163,7 +163,7 @@ body {
   left: -140px;
   width: 284px;
   height: 284px;
-  background-image: url("/images/textures/circles.svg");
+  background-image: url("../images/textures/circles.svg");
 }
 
 .parallax:nth-child(4) {
@@ -171,7 +171,7 @@ body {
   right: 0;
   width: 187px;
   height: 137px;
-  background-image: url("/images/textures/dots.svg");
+  background-image: url("../images/textures/dots.svg");
 }
 
 .parallax:nth-child(5) {
@@ -179,7 +179,7 @@ body {
   left: 45vw;
   width: 61px;
   height: 61px;
-  background-image: url("/images/textures/half-circle.svg");
+  background-image: url("../images/textures/half-circle.svg");
 }
 
 .parallax:nth-child(6) {
