@@ -22,8 +22,6 @@ for (let i = 0; i < coursesList.length; i++) {
   };
 }
 
-// console.log(coursesList[2].type);
-
 function handleClick(e) {
   const { target } = e;
 

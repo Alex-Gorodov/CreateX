@@ -117,6 +117,10 @@
     justify-self: end;
   }
 
+  .advantages-image {
+    width: 36.7vw;
+  }
+
   .advantages-list {
     max-width: 340px;
   }

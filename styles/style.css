@@ -106,12 +106,12 @@ body {
 .section-container {
   position: relative;
   display: grid;
-  max-width: 1310px;
+  max-width: 1230px;
   margin: auto;
   padding: 80px 40px;
   grid-template-columns: 1.2fr 1fr;
   grid-auto-rows: min-content;
-  column-gap: 6.5vw;
+  column-gap: 10vw;
   justify-content: center;
   align-items: center;
 }
@@ -130,6 +130,10 @@ body {
   background: var(--gray-200);
 }
 
+/* .parallax-wrapper {
+  position: relative;
+} */
+
 .parallax {
   display: block;
   position: absolute;
@@ -139,7 +143,7 @@ body {
 }
 
 .parallax:nth-child(1) {
-  top: 100px;
+  top: 200px;
   right: 10vw;
   width: 110px;
   height: 110px;
@@ -155,7 +159,7 @@ body {
 }
 
 .parallax:nth-child(3) {
-  bottom: 0;
+  bottom: -200px;
   left: -140px;
   width: 284px;
   height: 284px;
@@ -171,11 +175,19 @@ body {
 }
 
 .parallax:nth-child(5) {
-  top: 20vh;
-  right: 70vw;
+  bottom: 0px;
+  left: 45vw;
   width: 61px;
   height: 61px;
   background-image: url("/images/textures/half-circle.svg");
+}
+
+.parallax:nth-child(6) {
+  top: 220px;
+  left: 5vw;
+  width: 96px;
+  height: 96px;
+  background-image: url("/images/textures/shapes-rotated.svg");
 }
 
 /********************************     Buttons     ********************************/
@@ -564,6 +576,22 @@ body {
 
 /********************************     Advantages-section      ********************************/
 
+.advantages-section .parallax:nth-child(1) {
+  height: 180px;
+  width: 130px;
+  top: 350px;
+  left: -30px;
+  background-image: url("../images/textures/dots-yellow.svg");
+}
+
+.advantages-section .parallax:nth-child(2) {
+  height: 287px;
+  width: 287px;
+  top: 250px;
+  left: 90vw;
+  background-image: url("../images/textures/circles-yellow.svg");
+}
+
 .advantages-content-container {
   display: grid;
   justify-content: center;
@@ -621,7 +649,7 @@ body {
   display: grid;
   padding: 0;
   margin: 0;
-  grid-template-columns: repeat(auto-fit, 600px);
+  grid-template-columns: repeat(auto-fit, 500px);
   grid-column: span 2;
   gap: 30px;
   list-style-type: none;

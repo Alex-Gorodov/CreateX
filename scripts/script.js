@@ -133,7 +133,7 @@ const parallax = elements => {
     elements.forEach(element => {
       let y = window.innerHeight - element.getBoundingClientRect().top;
       if (y > 0) {
-        element.style.transform = 'translate3d(0, -' + (0.28 * y) + 'px, 0)';
+        element.style.transform = 'translate3d(0, -' + (0.15 * y) + 'px, 0)';
       }
     });
   }
