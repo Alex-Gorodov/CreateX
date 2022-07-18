@@ -131,10 +131,6 @@ body {
   background: var(--gray-200);
 }
 
-/* .parallax-wrapper {
-  position: relative;
-} */
-
 .parallax {
   display: block;
   position: absolute;
@@ -152,7 +148,7 @@ body {
 }
 
 .parallax:nth-child(2) {
-  top: 40vh;
+  top: 340px;
   left: 40vw;
   width: 110px;
   height: 110px;
@@ -176,7 +172,7 @@ body {
 }
 
 .parallax:nth-child(5) {
-  bottom: 0px;
+  bottom: 300px;
   left: 45vw;
   width: 61px;
   height: 61px;
