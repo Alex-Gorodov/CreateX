@@ -84,9 +84,8 @@
   .right-floated-btn,
   .left-floated-btn {
     justify-self: center;
-    margin-top: -40px;
     margin-bottom: 40px;
-    grid-row: 3;
+    grid-row: 5;
   }
 
   .intro-title {
@@ -123,6 +122,7 @@
 
   .advantages-list {
     max-width: 340px;
+    margin-bottom: 40px;
   }
 
   .courses-list {
@@ -159,16 +159,16 @@
   .benefit-text {
     max-width: 365px;
     margin: auto;
-    text-align: center;
   }
 
   .benefit-text p {
     max-width: 300px;
-    margin: 0 auto;
+    margin: 0;
   }
 
   .benefits-item-wrapper {
     row-gap: 30px;
+    justify-content: center;
   }
 
   .benefit-image-container {
@@ -327,7 +327,11 @@
 
   .benefits-buttons-item .button {
     text-align: center;
-    width: 100%;
+    width: 60%;
+  }
+
+  .benefits-item-wrapper {
+    justify-content: center;
   }
 
   .active-benefit-item {
@@ -454,9 +458,6 @@
 }
 
 @media (max-width: 560px) {
-  .benefits-item-wrapper .subtitle {
-    margin-bottom: 20px;
-  }
 
   .benefit-text p {
     text-align: justify;

@@ -101,6 +101,7 @@ body {
 .section {
   position: relative;
   padding: 20px;
+  overflow: hidden;
 }
 
 .section-container {
@@ -899,6 +900,7 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
+  margin-bottom: 40px;
   grid-column: span 2;
   list-style-type: none;
   justify-content: space-between;
@@ -922,15 +924,15 @@ body {
 .benefits-item-wrapper {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, 600px);
+  grid-template-columns: repeat(auto-fit, 400px);
   align-items: center;
-  justify-content: center;
-  grid-column: span 2;
+  justify-content: space-between;
 }
 
 .benefits-item-wrapper .subtitle {
   padding: 0;
   margin: 0;
+  margin-bottom: 20px;
 }
 
 .benefit-text {
@@ -1055,6 +1057,10 @@ body {
 }
 
 /********************************     Certificate-section      ********************************/
+
+.certificate-section {
+  overflow: visible;
+}
 
 .certificate-section .one-columned-container {
   justify-items: start;
