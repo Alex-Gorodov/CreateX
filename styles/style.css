@@ -148,7 +148,7 @@ body {
 }
 
 .parallax:nth-child(2) {
-  top: 340px;
+  top: 740px;
   left: 40vw;
   width: 110px;
   height: 110px;
@@ -156,7 +156,7 @@ body {
 }
 
 .parallax:nth-child(3) {
-  bottom: -200px;
+  top: 140%;
   left: -140px;
   width: 284px;
   height: 284px;
@@ -172,8 +172,8 @@ body {
 }
 
 .parallax:nth-child(5) {
-  bottom: 300px;
-  left: 45vw;
+  top: 460px;
+  left: 35vw;
   width: 61px;
   height: 61px;
   background-image: url("../images/textures/half-circle.svg");
@@ -576,7 +576,7 @@ body {
 .advantages-section .parallax:nth-child(1) {
   height: 180px;
   width: 130px;
-  top: 350px;
+  top: 550px;
   left: -30px;
   background-image: url("../images/textures/dots-yellow.svg");
 }
@@ -962,6 +962,14 @@ body {
 }
 
 /********************************     Events-section      ********************************/
+
+.events-section .parallax {
+  top: 400px;
+  right: -20px;
+  width: 284px;
+  height: 284px;
+  background-image: url("../images/textures/circles.svg");
+}
 
 .events-list {
   display: flex;
