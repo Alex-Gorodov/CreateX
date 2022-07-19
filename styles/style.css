@@ -115,6 +115,7 @@ body {
   column-gap: 10vw;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .one-columned-container {
@@ -137,6 +138,7 @@ body {
   background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
+  pointer-events: none;
 }
 
 .parallax:nth-child(1) {
@@ -1563,7 +1565,7 @@ body {
   height: 287px;
   width: 287px;
   top: 250px;
-  left: 90vw;
+  left: 80vw;
   background-image: url("../images/textures/circles-yellow.svg");
 }
 
