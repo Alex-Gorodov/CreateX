@@ -1412,6 +1412,22 @@ body {
 
 /********************************     Blog-section      ********************************/
 
+.blog-section .parallax:nth-child(1) {
+  height: 180px;
+  width: 130px;
+  top: 550px;
+  left: -30px;
+  background-image: url("../images/textures/dots-yellow.svg");
+}
+
+.blog-section .parallax:nth-child(2) {
+  height: 287px;
+  width: 287px;
+  top: 250px;
+  left: 90vw;
+  background-image: url("../images/textures/circles-yellow.svg");
+}
+
 .blog-list {
   display: flex;
   flex-wrap: wrap;
