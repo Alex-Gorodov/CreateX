@@ -573,22 +573,6 @@ body {
 
 /********************************     Advantages-section      ********************************/
 
-.advantages-section .parallax:nth-child(1) {
-  height: 180px;
-  width: 130px;
-  top: 550px;
-  left: -30px;
-  background-image: url("../images/textures/dots-yellow.svg");
-}
-
-.advantages-section .parallax:nth-child(2) {
-  height: 287px;
-  width: 287px;
-  top: 250px;
-  left: 90vw;
-  background-image: url("../images/textures/circles-yellow.svg");
-}
-
 .advantages-content-container {
   display: grid;
   justify-content: center;
@@ -638,6 +622,22 @@ body {
   width: 36.7vw;
   min-width: 320px;
   height: auto;
+}
+
+.advantages-section .parallax:nth-child(1) {
+  height: 180px;
+  width: 130px;
+  top: 550px;
+  left: -30px;
+  background-image: url("../images/textures/dots-yellow.svg");
+}
+
+.advantages-section .parallax:nth-child(2) {
+  height: 287px;
+  width: 287px;
+  top: 250px;
+  left: 90vw;
+  background-image: url("../images/textures/circles-yellow.svg");
 }
 
 /********************************     Courses-section      ********************************/
@@ -963,14 +963,6 @@ body {
 
 /********************************     Events-section      ********************************/
 
-.events-section .parallax {
-  top: 400px;
-  right: -20px;
-  width: 284px;
-  height: 284px;
-  background-image: url("../images/textures/circles.svg");
-}
-
 .events-list {
   display: flex;
   width: 100%;
@@ -1060,6 +1052,14 @@ body {
   color: var(--gray-900);
 }
 
+.events-section .parallax {
+  top: 400px;
+  right: -20px;
+  width: 284px;
+  height: 284px;
+  background-image: url("../images/textures/circles.svg");
+}
+
 /********************************     Certificate-section      ********************************/
 
 .certificate-section {
@@ -1124,30 +1124,6 @@ body {
 }
 
 /********************************     Tutors-section      ********************************/
-
-.tutors-section .parallax:nth-child(1) {
-  top: 400px;
-  right: 10vw;
-  width: 110px;
-  height: 110px;
-  background-image: url("../images/textures/shapes.svg");
-}
-
-.tutors-section .parallax:nth-child(2) {
-  top: 600px;
-  left: 10vw;
-  width: 110px;
-  height: 110px;
-  background-image: url("../images/textures/shapes-1.svg");
-}
-
-.tutors-section .parallax:nth-child(3) {
-  top: 10%;
-  left: -140px;
-  width: 284px;
-  height: 284px;
-  background-image: url("../images/textures/circles.svg");
-}
 
 .tutors-section {
   margin-top: -180px;
@@ -1268,6 +1244,30 @@ body {
 
 .tutor-card:nth-child(n + 5) {
   display: none;
+}
+
+.tutors-section .parallax:nth-child(1) {
+  top: 400px;
+  right: 10vw;
+  width: 110px;
+  height: 110px;
+  background-image: url("../images/textures/shapes.svg");
+}
+
+.tutors-section .parallax:nth-child(2) {
+  top: 600px;
+  left: 10vw;
+  width: 110px;
+  height: 110px;
+  background-image: url("../images/textures/shapes-1.svg");
+}
+
+.tutors-section .parallax:nth-child(3) {
+  top: 10%;
+  left: -140px;
+  width: 284px;
+  height: 284px;
+  background-image: url("../images/textures/circles.svg");
 }
 
 /********************************     Reviews-section      ********************************/
@@ -1412,22 +1412,6 @@ body {
 
 /********************************     Blog-section      ********************************/
 
-.blog-section .parallax:nth-child(1) {
-  height: 180px;
-  width: 130px;
-  top: 550px;
-  left: -30px;
-  background-image: url("../images/textures/dots-yellow.svg");
-}
-
-.blog-section .parallax:nth-child(2) {
-  height: 287px;
-  width: 287px;
-  top: 250px;
-  left: 90vw;
-  background-image: url("../images/textures/circles-yellow.svg");
-}
-
 .blog-list {
   display: flex;
   flex-wrap: wrap;
@@ -1565,6 +1549,22 @@ body {
   background-image: url("../images/Red-arrow.svg");
 
   content: "";
+}
+
+.blog-section .parallax:nth-child(1) {
+  height: 180px;
+  width: 130px;
+  top: 550px;
+  left: -30px;
+  background-image: url("../images/textures/dots-yellow.svg");
+}
+
+.blog-section .parallax:nth-child(2) {
+  height: 287px;
+  width: 287px;
+  top: 250px;
+  left: 90vw;
+  background-image: url("../images/textures/circles-yellow.svg");
 }
 
 /********************************     Subscribe-section      ********************************/
