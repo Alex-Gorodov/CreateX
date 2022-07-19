@@ -156,7 +156,7 @@ body {
 }
 
 .parallax:nth-child(3) {
-  top: 140%;
+  top: 90%;
   left: -140px;
   width: 284px;
   height: 284px;
@@ -164,8 +164,8 @@ body {
 }
 
 .parallax:nth-child(4) {
-  top: 600px;
-  right: 0;
+  top: 70%;
+  right: -70px;
   width: 187px;
   height: 137px;
   background-image: url("../images/textures/dots.svg");
@@ -1124,6 +1124,30 @@ body {
 }
 
 /********************************     Tutors-section      ********************************/
+
+.tutors-section .parallax:nth-child(1) {
+  top: 400px;
+  right: 10vw;
+  width: 110px;
+  height: 110px;
+  background-image: url("../images/textures/shapes.svg");
+}
+
+.tutors-section .parallax:nth-child(2) {
+  top: 600px;
+  left: 10vw;
+  width: 110px;
+  height: 110px;
+  background-image: url("../images/textures/shapes-1.svg");
+}
+
+.tutors-section .parallax:nth-child(3) {
+  top: 10%;
+  left: -140px;
+  width: 284px;
+  height: 284px;
+  background-image: url("../images/textures/circles.svg");
+}
 
 .tutors-section {
   margin-top: -180px;
