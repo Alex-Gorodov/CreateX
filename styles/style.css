@@ -107,7 +107,7 @@ body {
 .section-container {
   position: relative;
   display: grid;
-  max-width: 1230px;
+  max-width: 1310px;
   margin: auto;
   padding: 80px 40px;
   grid-template-columns: 1.2fr 1fr;
