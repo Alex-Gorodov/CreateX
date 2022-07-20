@@ -1864,7 +1864,7 @@ body {
   max-width: 486px;
   width: 90vw;
   margin: 10vh auto;
-  max-height: 96vh;
+  max-height: 90vh;
   padding: 48px 0;
   background-color: var(--white);
   border: 1px solid #E5E8ED;

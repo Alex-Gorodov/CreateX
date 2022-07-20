@@ -474,7 +474,7 @@
     align-items: flex-end;
   }
   .modal-block {
-    margin: 2vh auto;
+    margin: 2vh auto 8vh;
   }
 
   .modal-check {
