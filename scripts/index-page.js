@@ -7,7 +7,6 @@ let arTutorsLength = tutors.length;
 
 let ww = window.innerWidth;
 
-
 function moveRight() {
   if (ww <= 800) {
     if(i == arTutorsLength-1){
@@ -36,17 +35,13 @@ function moveLeft() {
   }
 }
 
-// nextTutor.addEventListener("click", moveRight);
 nextTutor.onclick = function () {
   moveRight();
 };
 
-// prevTutor.addEventListener("click", moveLeft);
 prevTutor.onclick = function () {
   moveLeft();
 };
-
-
 
 // Reviews slider
 let reviews = document.getElementsByClassName("review-item");
@@ -109,12 +104,10 @@ for (let i = 0; i < reviewPagination.length; i++) {
   };
 }
 
-// prevReview.addEventListener("click", moveLeftReview);
 prevReview.onclick = function() {
   moveLeftReview();
 };
 
-// nextReview.addEventListener("click", moveRightReview);
 nextReview.onclick = function() {
   moveRightReview();
 };

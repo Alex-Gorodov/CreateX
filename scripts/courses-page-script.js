@@ -1,5 +1,4 @@
 // Course list filters toggler
-
 const container = document.querySelector(".filters-list");
 const courseButtons = document.querySelectorAll(".filter-item .button");
 const coursesList = Array.from(document.querySelectorAll(".course-card"));
@@ -37,20 +36,31 @@ function handleClick(e) {
 }
 
 // array for results
-let result = [];
+// let result = [];
 
 // building array of results
-for (let n = 0; n < coursesList.length; n++) {
-  courseButtons[n].onclick = function () {
-    for (let j = 0; j < coursesList.length; j++) {
-      if ((courseButtons[n].textContent.substring(0, 5)).match(coursesList[j].type.substring(0, 5))) {
-        result.push(coursesList[j]);
-        console.log(result);
+// for (let n = 0; n < coursesList.length; n++) {
+//   courseButtons[n].onclick = function () {
+    // for (let j = 0; j < coursesList.length; j++) {
+    //   if (!(courseButtons[n].textContent.substring(0, 5)).match(coursesList[j].type.substring(0, 5))) {
+    //     coursesList.slice(coursesList[j]);
+    //   } 
+    //   else {
+    //     result.push(coursesList[j]);
+    //     console.log(result);
+    //   }
+    // }
+    // coursesList = result;
+    function compare( a, b ) {
+      if ( a.type < b.type ){
+        return -1;
       }
+      if ( a.type > b.type ){
+        return 1;
+      }
+      return 0;
     }
-  };
-  //
-  if (result.length > 0) {
-    coursesList.classList.add("visually-hidden"); 
-  }
-}
+    
+    coursesList.sort( compare );
+//   };
+// }

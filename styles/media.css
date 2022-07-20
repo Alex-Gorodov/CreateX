@@ -473,6 +473,9 @@
   .footer-column:nth-child(2n) .footer-column-list {
     align-items: flex-end;
   }
+  .modal-block {
+    margin: 2vh auto;
+  }
 }
 
 @media (max-width: 432px) {
