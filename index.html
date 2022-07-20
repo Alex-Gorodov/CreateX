@@ -621,7 +621,7 @@
       <div class="section-container one-columned-container">
         <h3 class="section-title">Subscribe to the Createx&#160;School <br>announcements</h3>
         <span class="pretitle">Don't miss anything</span>
-        <form class="subscribe-btn-wrapper" method="post">
+        <form class="subscribe-btn-wrapper" action="https://echo.htmlacademy.ru" method="post">
           <label for="e-mail">
             <input class="form-input subscribe-input" type="email" name="email" id="e-mail" placeholder="Your working email" required>
           </label>
@@ -773,7 +773,7 @@
         <span class="visually-hidden">Close this window.</span>
       </button>
       <div class="">
-        <form action="#" class="modal-sign-form" method="post">
+        <form action="https://echo.htmlacademy.ru" class="modal-sign-form" method="post">
           <h3 class="modal-title">Sign in</h3>
           <p class="modal-description">Sign in to your account using email and password provided during registration.</p>
           <fieldset class="login-fields">
@@ -784,11 +784,11 @@
             </label>
             <label for="signin-password" class="modal-form-item modal-password">
               <span class="field-label">Password</span>
-              <input class="modal-input" id="signin-password" name="Password" type="password" placeholder="Password" required>
+              <input class="modal-input" id="signin-password" name="Password" type="password" placeholder="Password" value="FakePassword1" required>
             </label>
             <label for="keep-signedin" class="modal-form-item modal-check">
               <p class="checker">
-                <input type="checkbox" id="keep-signedin">
+                <input type="checkbox" id="keep-signedin" name="Keep signed in">
                 <span class="field-label">Keep me signed in</span>
               </p>
               <a href="#" class="forgot-password">Forgot password?</a>
@@ -841,14 +841,14 @@
         <span class="visually-hidden">Close this window.</span>
       </button>
       <div class="">
-        <form action="#" class="modal-sign-form" method="post">
+        <form action="https://echo.htmlacademy.ru" class="modal-sign-form" method="post">
           <h3 class="modal-title">Sign up</h3>
           <p class="modal-description">Registration takes less than a minute but gives you full control over your studying.</p>
           <fieldset class="login-fields">
             <legend class="visually-hidden">To sign up fill these fields.</legend>
             <label for="signup-username" class="modal-form-item">
               <span class="field-label">Fullname</span>
-              <input class="modal-input" id="signup-username" name="Username" type="email" placeholder="Your full name" required>
+              <input class="modal-input" id="signup-username" name="Username" type="text" placeholder="Your full name" required>
             </label>
             <label for="signup-email" class="modal-form-item modal-email">
               <span class="field-label">Email</span>
@@ -856,15 +856,15 @@
             </label>
             <label for="signup-password" class="modal-form-item">
               <span class="field-label">Password</span>
-              <input class="modal-input" id="signup-password" name="Password" type="password" placeholder="Password" required>
+              <input class="modal-input" id="signup-password" name="Password" type="password" placeholder="Password" value="FakePassword1" required>
             </label>
             <label for="signup-confirm-password" class="modal-form-item">
               <span class="field-label">Confirm Password</span>
-              <input class="modal-input" id="signup-confirm-password" name="Password" type="password" placeholder="Password" required>
+              <input class="modal-input" id="signup-confirm-password" name="Password" type="password" placeholder="Password" value="FakePassword1" required>
             </label>
             <label for="remember" class="modal-form-item modal-check">
               <p class="checker">
-                <input type="checkbox" id="remember">
+                <input type="checkbox" id="remember" name="Remember">
                 <span class="field-label">Remember me</span>
               </p>
             </label>
