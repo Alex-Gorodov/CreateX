@@ -4,125 +4,20 @@ upButton.onclick = function() {
   window.scrollTo(0, 0);
 };
 
+let pageBody = document.querySelector("body");
+
 let burger = document.querySelector(".nav-burger .burger-nav-list");
 
 let firstLine = document.querySelector(".burger-line:nth-of-type(1)");
 let secondLine = document.querySelector(".burger-line:nth-of-type(2)");
 let thirdLine = document.querySelector(".burger-line:nth-of-type(3)");
 
-function burgerOpen() {
+function burgerToggle() {
     burger.classList.toggle("nav-list-opened");
 
     firstLine.classList.toggle("burger-open-first-line");
     secondLine.classList.toggle("burger-open-second-line");
     thirdLine.classList.toggle("burger-open-third-line");
-}
-
-// Tutors slider
-let tutors = document.getElementsByClassName("tutor-card");
-let nextTutor = document.querySelector(".slider-btn-next");
-let prevTutor = document.querySelector(".slider-btn-prev");
-let i = 0;
-let arTutorsLength = tutors.length;
-
-let ww = window.innerWidth;
-
-nextTutor.addEventListener("click", moveRight);
-
-function moveRight() {
-  if (ww <= 800) {
-    if(i == arTutorsLength-1){
-      tutors[0].style.display = "flex";
-      tutors[i].style.display = "none";
-      i = 0;
-    } else {
-      tutors[i+1].style.display = "flex";
-      tutors[i].style.display = "none";
-      i++;
-    }
-  }   
-}
-
-prevTutor.addEventListener("click", moveLeft);
-
-function moveLeft() {
-  if (ww <= 800) {
-    if(i == 0){
-      tutors[arTutorsLength-1].style.display = "flex";
-      tutors[i].style.display = "none";
-      i = arTutorsLength-1;
-    } else {
-      tutors[i-1].style.display = "flex";
-      tutors[i].style.display = "none";
-      i--;
-    }
-  }
-}
-
-// Reviews slider
-let reviews = document.getElementsByClassName("review-item");
-let prevReview = document.querySelector(".review-prev");
-let nextReview = document.querySelector(".review-next");
-let j = 0;
-let arReviewsLength = reviews.length;
-
-let reviewPagination = document.querySelectorAll(".pagination-btn");
-
-for (let i = 0; i < reviewPagination.length; i++) {
-    reviewPagination[i].onclick = function () {
-      if (reviewPagination[i].classList.contains("active-slide")) {
-        return;
-      } else { 
-        for (let n = 0; n < reviews.length; n++) {
-          if (reviewPagination[n].classList.contains("active-slide")) {
-            reviewPagination[n].classList.remove("active-slide");
-            reviews[n].classList.remove("review-active");
-            reviewPagination[i].classList.add("active-slide");
-            reviews[i].classList.add("review-active");
-          }
-        }
-      }
-    };
-}
-
-
-nextReview.addEventListener("click", moveRightReview);
-
-function moveRightReview() {
-    if(j == arReviewsLength-1) {
-      reviews[0].classList.add("review-active");
-      reviews[j].classList.remove("review-active");
-      reviewPagination[j].classList.remove("active-slide");
-      reviewPagination[0].classList.add("active-slide");
-      j = 0;
-    } else {
-      reviews[j].classList.remove("review-active");
-      reviews[j+1].classList.add("review-active");
-      reviewPagination[j].classList.remove("active-slide");
-      reviewPagination[j+1].classList.add("active-slide");
-      j++;
-    }
-
-}
-
-prevReview.addEventListener("click", moveLeftReview);
-
-function moveLeftReview() {
-    if(j == 0) {
-      reviews[j].classList.remove("review-active");
-      reviews[arReviewsLength-1].classList.add("review-active");
-
-      reviewPagination[j].classList.remove("active-slide");
-      reviewPagination[reviewPagination.length-1].classList.add("active-slide");
-      j = arReviewsLength-1;
-    } else {
-      reviews[j].classList.remove("review-active");
-      reviews[j-1].classList.add("review-active");
-
-      reviewPagination[j].classList.remove("active-slide");
-      reviewPagination[j-1].classList.add("active-slide");
-      j--;
-    }
 }
 
 // Parallax
@@ -144,3 +39,55 @@ parallax(parallaxElements);
 window.onscroll = () => {
   parallax(parallaxElements);
 };
+
+// MODAL
+let loginBtn = document.querySelectorAll(".login-btn");
+let signInBtn = document.querySelector(".signin-btn");
+let signUpBtn = document.querySelector(".signup-btn");
+
+let modalBg = document.querySelector(".modal");
+let modalSignIn = document.querySelector(".modal-signin");
+let modalSignUp = document.querySelector(".modal-signup");
+
+let modalCloseBtn = document.querySelectorAll(".modal-close-btn");
+
+const modalToggle = function(modal) {
+  modal.classList.toggle("modal-opened");
+};
+
+loginBtn.forEach(button => {
+  button.onclick = function() {
+    modalToggle(modalBg);
+    modalToggle(modalSignIn);  
+    if (burger.classList.contains("nav-list-opened")) {
+      burgerToggle();
+    }
+    pageBody.classList.add('locked');
+  };
+});
+
+signUpBtn.onclick = function() {
+  modalToggle(modalSignIn);
+  modalToggle(modalSignUp);
+};
+
+signInBtn.onclick = function() {
+  modalToggle(modalSignIn);
+  modalToggle(modalSignUp);
+};
+
+modalCloseBtn.forEach(button => {
+  button.onclick = function() {
+    modalToggle(modalBg);
+    if (modalSignIn.classList.contains('modal-opened')) {
+      modalToggle(modalSignIn);
+    }
+    if (modalSignUp.classList.contains('modal-opened')) {
+      modalToggle(modalSignUp);
+    } 
+    if (burger.classList.contains("nav-list-opened")) {
+      burgerToggle();
+    }
+    pageBody.classList.remove('locked');
+  };
+});
