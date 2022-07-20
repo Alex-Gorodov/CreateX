@@ -440,11 +440,11 @@
   }
 
   .tutors-slider-buttons {
-    width: 100%;
+    width: 95vw;
     justify-content: space-between;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(50%);
   }
 
   .tutor-card:not(:nth-child(1)) {
@@ -475,6 +475,14 @@
   }
   .modal-block {
     margin: 2vh auto;
+  }
+
+  .modal-check {
+    flex-direction: column;
+  }
+  
+  .forgot-password {
+    margin-left: 0;
   }
 }
 
