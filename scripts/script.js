@@ -112,22 +112,34 @@ showPas.forEach(element => {
     if (element.classList.contains('show-signin')) {
       if (signInPas.getAttribute('type') === 'password') {
         signInPas.setAttribute('type', 'text');
+        element.classList.add('pas-showed');
+        element.style.opacity = '0.5';
       } else {
         signInPas.setAttribute('type', 'password');
+        element.classList.remove('pas-showed');
+        element.style.opacity = '1';
       }
     }
     if (element.classList.contains('show-signup')) {
       if (signUpPas.getAttribute('type') === 'password') {
         signUpPas.setAttribute('type', 'text');
+        element.classList.add('pas-showed');
+        element.style.opacity = '0.5';
       } else {
         signUpPas.setAttribute('type', 'password');
+        element.classList.remove('pas-showed');
+        element.style.opacity = '1';
       }
     }
     if (element.classList.contains('show-confirm')) {
       if (confirmPas.getAttribute('type') === 'password') {
         confirmPas.setAttribute('type', 'text');
+        element.classList.add('pas-showed');
+        element.style.opacity = '0.5';
       } else {
         confirmPas.setAttribute('type', 'password');
+        element.classList.remove('pas-showed');
+        element.style.opacity = '1';
       }
     }
   };
