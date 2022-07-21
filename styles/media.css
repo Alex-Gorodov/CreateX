@@ -556,3 +556,16 @@
     max-width: 250px;
   }
 }
+
+@media (max-width: 360px) {
+  .footer-column:nth-child(4) .footer-column-list {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+  }
+
+  .footer-input {
+    width: 80vw;
+  }
+}
