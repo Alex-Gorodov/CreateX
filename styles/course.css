@@ -169,7 +169,9 @@
 .curator-image-wrapper {
   position: relative;
   width: 495px;
+  /* max-width: 80vw; */
   height: 580px;
+  /* height: 49vh; */
   background-color: var(--secondary-color);
   grid-column: 1 / 2;
   grid-row-start: 1;
@@ -177,6 +179,8 @@
 
 .curator-image {
   position: absolute;
+  /* max-width: 80vw; */
+  /* height: auto; */
   bottom: 0;
   left: 20px;
 }
