@@ -91,3 +91,32 @@ modalCloseBtn.forEach(button => {
     pageBody.classList.remove('locked');
   };
 });
+
+// Show password button
+// NOT FINISHED!
+
+let showPas = document.querySelectorAll('.show-password-btn');
+
+let signInPas = document.getElementById('signin-password');
+let signUpPas = document.getElementById('signup-password');
+let confirmPas = document.getElementById('signup-confirm-password');
+
+showPas.forEach(element => {
+  element.onclick = function() {
+    if (signInPas.getAttribute('type') === 'password') {
+      signInPas.setAttribute('type', 'text');
+    } else {
+      signInPas.setAttribute('type', 'password');
+    }
+    if (signUpPas.getAttribute('type') === 'password') {
+      signUpPas.setAttribute('type', 'text');
+    } else {
+      signUpPas.setAttribute('type', 'password');
+    }
+    if (confirmPas.getAttribute('type') === 'password') {
+      confirmPas.setAttribute('type', 'text');
+    } else {
+      confirmPas.setAttribute('type', 'password');
+    }
+  };
+});
