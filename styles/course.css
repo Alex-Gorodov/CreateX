@@ -1,14 +1,11 @@
 .course-page-body header {
   background: var(--section-gradient);
-
+  position: relative;
+  max-height: 468px;
 }
 
 .course-page-body .header-navigation {
   display: flex;
-}
-
-.course-page-body .header-navigation + .section {
-  margin-top: 50px;    
 }
 
 .course-page-intro {
@@ -21,6 +18,24 @@
 
 .course-page-intro .pretitle {
   color: var(--primary-color);
+}
+
+.course-page-body .page-header .parallax:nth-child(1) {
+  top: 105%;
+  right: 20vw;
+  width: 96px;
+  height: 96px;
+  background-image: url("../images/textures/shapes-rotated.svg");
+}
+
+.course-page-body .page-header .parallax:nth-child(2) {
+  top: 30%;
+  left: 5%;
+}
+
+.course-page-body .page-header .parallax:nth-child(3) {
+  top: 80%;
+  left: -100px;
 }
 
 .about-course-section .section-container {
@@ -140,4 +155,77 @@
 .course-info-wrapper .button {
   max-width: 100%;
   width: 100%;
+}
+
+.curator-content-wrapper {
+  display: grid;
+  margin-top: -20px;
+}
+
+.course-curator-section .section-container {
+  align-items: start;
+}
+
+.curator-image-wrapper {
+  position: relative;
+  width: 495px;
+  height: 580px;
+  background-color: var(--secondary-color);
+  grid-column: 1 / 2;
+  grid-row-start: 1;
+}
+
+.curator-image {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+}
+
+.curator-content-wrapper .section-title {
+  margin: 0;
+  margin-bottom: 18px;
+}
+
+.curator-position {
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--gray-700);
+}
+
+.curator-rating-list {
+  padding: 0;
+  margin: 32px 0;
+  list-style-type: none;
+}
+
+.curator-rating-item {
+  display: flex;
+  align-items: center;
+}
+
+.curator-rating-item::before {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  background-position: center;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.curator-rating-item:nth-child(1)::before {
+  background-image: url("../images/courses/UE/Star.svg");
+}
+
+.curator-rating-item:nth-child(2)::before {
+  background-image: url("../images/courses/UE/Play.svg");
+}
+
+.curator-rating-item:nth-child(3)::before {
+  background-image: url("../images/courses/UE/Profile.svg");
+}
+
+.curator-description {
+  margin: 0;
 }

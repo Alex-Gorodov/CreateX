@@ -52,7 +52,12 @@
   .course-info-wrapper {
     grid-row-end: 6;
     grid-row: auto;
+    justify-self: center;
     margin-top: 20px;
+  }
+
+  .curator-position {
+    text-align: center;
   }
 
   .header-navigation + .section {
