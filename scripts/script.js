@@ -78,27 +78,6 @@ signInBtn.onclick = function() {
 
 let passwordInput = document.querySelectorAll("[type='password']");
 
-modalCloseBtn.forEach(button => {
-  button.onclick = function() {
-    modalToggle(modalBg);
-    if (modalSignIn.classList.contains('modal-opened')) {
-      modalToggle(modalSignIn);
-    }
-    if (modalSignUp.classList.contains('modal-opened')) {
-      modalToggle(modalSignUp);
-    } 
-    if (burger.classList.contains("nav-list-opened")) {
-      burgerToggle();
-    }
-    pageBody.classList.remove('locked');
-    // Passwords hiding
-    passwordInput.forEach(element => {
-      if (element.getAttribute('type') === 'text') {
-        element.setAttribute('type', 'password');
-      }
-    });
-  };
-});
 
 // Show password button
 let showPas = document.querySelectorAll('.show-password-btn');
@@ -142,5 +121,33 @@ showPas.forEach(element => {
         element.style.opacity = '1';
       }
     }
+  };
+});
+
+modalCloseBtn.forEach(button => {
+  button.onclick = function() {
+    modalToggle(modalBg);
+    if (modalSignIn.classList.contains('modal-opened')) {
+      modalToggle(modalSignIn);
+    }
+    if (modalSignUp.classList.contains('modal-opened')) {
+      modalToggle(modalSignUp);
+    } 
+    if (burger.classList.contains("nav-list-opened")) {
+      burgerToggle();
+    }
+    pageBody.classList.remove('locked');
+    // Passwords hiding
+    passwordInput.forEach(element => {
+      if (element.getAttribute('type') === 'text') {
+        element.setAttribute('type', 'password');
+      }
+      showPas.forEach(element => {
+        if (element.classList.contains('pas-showed')) {
+          element.classList.remove('pas-showed');
+          element.style.opacity = '1';
+        }
+      });
+    });
   };
 });

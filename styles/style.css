@@ -1978,10 +1978,14 @@ body {
 .show-password-btn {
   position: absolute;
   right: 16px;
-  top: 40px;
+  top: 38px;
   display: block;
   width: 24px;
   height: 24px;
+  background-image: url("../images/Eye.svg");
+  background-size: 16px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -1989,8 +1993,8 @@ body {
 
 .pas-showed::after {
   position: absolute;
-  top: 10px;
-  left: 2px;
+  top: 12px;
+  left: 0;
   display: block;
   width: 24px;
   height: 1px;
