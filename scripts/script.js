@@ -91,6 +91,7 @@ modalCloseBtn.forEach(button => {
       burgerToggle();
     }
     pageBody.classList.remove('locked');
+    // Passwords hiding
     passwordInput.forEach(element => {
       if (element.getAttribute('type') === 'text') {
         element.setAttribute('type', 'password');
