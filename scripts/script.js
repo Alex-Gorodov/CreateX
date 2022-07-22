@@ -18,6 +18,8 @@ function burgerToggle() {
   firstLine.classList.toggle('burger-open-first-line');
   secondLine.classList.toggle('burger-open-second-line');
   thirdLine.classList.toggle('burger-open-third-line');
+
+  pageBody.classList.toggle('locked');
 }
 
 // Parallax
@@ -64,7 +66,9 @@ function modalClose(modal) {
 document.addEventListener('keydown', function(e) {
   let keyCode = e.keyCode;
   if (keyCode === 27) {
-    modalClose(modalBg);
+    if (modalBg.classList.contains('modal-opened')) {
+      modalClose(modalBg);
+    }
     if (modalSignIn.classList.contains('modal-opened')) {
       modalClose(modalSignIn);
     }
