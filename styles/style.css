@@ -2027,7 +2027,7 @@ body {
   content: "";
 }
 
-.modal-social-list {
+.social-list {
   display: flex;
   padding: 0;
   margin: 0;
@@ -2036,14 +2036,14 @@ body {
   list-style-type: none;
 }
 
-.modal-social-item:not(:last-child) {
+.social-item:not(:last-child) {
   margin-right: 18px;
 }
 
-.modal-social-btn {
+.social-btn {
   color: #787A80;
 }
 
-.modal-social-btn:hover {
+.social-btn:hover {
   color: var(--primary-color);
 }

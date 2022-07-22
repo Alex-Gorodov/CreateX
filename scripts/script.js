@@ -1,23 +1,23 @@
-let upButton = document.querySelector(".footer-to-top");
+let upButton = document.querySelector('.footer-to-top');
 
 upButton.onclick = function() {
   window.scrollTo(0, 0);
 };
 
-let pageBody = document.querySelector("body");
+let pageBody = document.querySelector('html');
 
-let burger = document.querySelector(".nav-burger .burger-nav-list");
+let burger = document.querySelector('.nav-burger .burger-nav-list');
 
-let firstLine = document.querySelector(".burger-line:nth-of-type(1)");
-let secondLine = document.querySelector(".burger-line:nth-of-type(2)");
-let thirdLine = document.querySelector(".burger-line:nth-of-type(3)");
+let firstLine = document.querySelector('.burger-line:nth-of-type(1)');
+let secondLine = document.querySelector('.burger-line:nth-of-type(2)');
+let thirdLine = document.querySelector('.burger-line:nth-of-type(3)');
 
 function burgerToggle() {
-  burger.classList.toggle("nav-list-opened");
+  burger.classList.toggle('nav-list-opened');
 
-  firstLine.classList.toggle("burger-open-first-line");
-  secondLine.classList.toggle("burger-open-second-line");
-  thirdLine.classList.toggle("burger-open-third-line");
+  firstLine.classList.toggle('burger-open-first-line');
+  secondLine.classList.toggle('burger-open-second-line');
+  thirdLine.classList.toggle('burger-open-third-line');
 }
 
 // Parallax
@@ -41,25 +41,44 @@ window.onscroll = () => {
 };
 
 // MODAL
-let loginBtn = document.querySelectorAll(".login-btn");
-let signInBtn = document.querySelector(".signin-btn");
-let signUpBtn = document.querySelector(".signup-btn");
+let loginBtn = document.querySelectorAll('.login-btn');
+let signInBtn = document.querySelector('.signin-btn');
+let signUpBtn = document.querySelector('.signup-btn');
 
-let modalBg = document.querySelector(".modal");
-let modalSignIn = document.querySelector(".modal-signin");
-let modalSignUp = document.querySelector(".modal-signup");
+let modalBg = document.querySelector('.modal');
+let modalSignIn = document.querySelector('.modal-signin');
+let modalSignUp = document.querySelector('.modal-signup');
 
-let modalCloseBtn = document.querySelectorAll(".modal-close-btn");
+let modalCloseBtn = document.querySelectorAll('.modal-close-btn');
 
 const modalToggle = function(modal) {
-  modal.classList.toggle("modal-opened");
+  modal.classList.toggle('modal-opened');
+  pageBody.classList.add('locked');
 };
+
+function modalClose(modal) {
+  modalToggle(modal);
+  pageBody.classList.remove('locked');
+}
+
+document.addEventListener('keydown', function(e) {
+  let keyCode = e.keyCode;
+  if (keyCode === 27) {
+    modalClose(modalBg);
+    if (modalSignIn.classList.contains('modal-opened')) {
+      modalClose(modalSignIn);
+    }
+    if (modalSignUp.classList.contains('modal-opened')) {
+      modalClose(modalSignUp);
+    }
+  }
+});
 
 loginBtn.forEach(button => {
   button.onclick = function() {
     modalToggle(modalBg);
     modalToggle(modalSignIn);  
-    if (burger.classList.contains("nav-list-opened")) {
+    if (burger.classList.contains('nav-list-opened')) {
       burgerToggle();
     }
     pageBody.classList.add('locked');
@@ -133,7 +152,7 @@ modalCloseBtn.forEach(button => {
     if (modalSignUp.classList.contains('modal-opened')) {
       modalToggle(modalSignUp);
     } 
-    if (burger.classList.contains("nav-list-opened")) {
+    if (burger.classList.contains('nav-list-opened')) {
       burgerToggle();
     }
     pageBody.classList.remove('locked');
