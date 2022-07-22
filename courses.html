@@ -280,7 +280,6 @@
           <button class="pagination-btn" type="button">
             <span class="visually-hidden">slide 5</span>
           </button>
-          </li>
         </div>
       </div>
     </section>
@@ -473,15 +472,15 @@
             <label for="signin-password" class="modal-form-item modal-password">
               <span class="field-label">Password</span>
               <input class="modal-input" id="signin-password" name="Password" type="password" placeholder="Password" value="FakePassword1" required>
-              <button class="show-password-btn show-signin" type="button"></button>
+              <a class="show-password-btn show-signin" href="#"></a>
             </label>
-            <label for="keep-signedin" class="modal-form-item modal-check">
-              <p class="checker">
+            <div class="modal-form-item modal-check">
+              <label for="keep-signedin" class="checker">
                 <input type="checkbox" id="keep-signedin" name="Keep signed in">
                 <span class="field-label">Keep me signed in</span>
-              </p>
+              </label>
               <a href="#" class="forgot-password">Forgot password?</a>
-            </label>
+            </div>
           </fieldset>
           <button class="button filled-btn" type="submit">Sign in</button>
           <p class="to-signup field-label">Don't have an account? 
@@ -546,19 +545,19 @@
             <label for="signup-password" class="modal-form-item modal-password">
               <span class="field-label">Password</span>
               <input class="modal-input" id="signup-password" name="Password" type="password" placeholder="Password" value="FakePassword1" required>
-              <button class="show-password-btn show-signup" type="button"></button>
+              <a class="show-password-btn show-signup" href="#"></a>
             </label>
             <label for="signup-confirm-password" class="modal-form-item modal-password">
               <span class="field-label">Confirm Password</span>
               <input class="modal-input" id="signup-confirm-password" name="Password" type="password" placeholder="Password" value="FakePassword1" required>
-              <button class="show-password-btn show-confirm" type="button"></button>
+              <a class="show-password-btn show-confirm" href="#"></a>
             </label>
-            <label for="remember" class="modal-form-item modal-check">
-              <p class="checker">
+            <div class="checker">
+              <label for="remember" class="modal-form-item modal-check">
                 <input type="checkbox" id="remember" name="Remember">
                 <span class="field-label">Remember me</span>
-              </p>
-            </label>
+              </label>
+            </div>
           </fieldset>
           <button class="button filled-btn" type="submit">Sign up</button>
           <p class="to-signin field-label">Already have an account?
