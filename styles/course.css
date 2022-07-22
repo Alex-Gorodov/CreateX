@@ -168,6 +168,8 @@
 
 .course-curator-section .section-container {
   align-items: start;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4.5vw;
 }
 
 .curator-image-wrapper {
@@ -232,4 +234,9 @@
 
 .curator-description {
   margin: 0;
+  margin-bottom: 40px;
+}
+
+.curator-social-list {
+  justify-content: start;
 }

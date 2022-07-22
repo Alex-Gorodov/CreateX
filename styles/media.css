@@ -301,6 +301,10 @@
     justify-content: center;
     align-items: center;
   }
+
+  .course-curator-section .section-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 980px) and (min-width: 880px) {
@@ -482,6 +486,7 @@
   .reviews-section .section-title {
     margin: 0;
   }
+
   .footer-column:nth-child(2n) {
     align-items: flex-end;
   }
