@@ -76,6 +76,18 @@ document.addEventListener('keydown', function(e) {
       modalClose(modalSignUp);
     }
   }
+  // Passwords hiding
+  passwordInput.forEach(element => {
+    if (element.getAttribute('type') === 'text') {
+      element.setAttribute('type', 'password');
+    }
+    showPas.forEach(element => {
+      if (element.classList.contains('pas-showed')) {
+        element.classList.remove('pas-showed');
+        element.style.opacity = '1';
+      }
+    });
+  });
 });
 
 loginBtn.forEach(button => {
