@@ -22,7 +22,7 @@ function burgerToggle() {
   pageBody.classList.toggle('locked');
 }
 
-// Parallax
+// PARALLAX
 const parallaxElements = document.querySelectorAll('.parallax');
 
 const parallax = elements => {
@@ -62,33 +62,6 @@ function modalClose(modal) {
   modalToggle(modal);
   pageBody.classList.remove('locked');
 }
-
-document.addEventListener('keydown', function(e) {
-  let keyCode = e.keyCode;
-  if (keyCode === 27) {
-    if (modalBg.classList.contains('modal-opened')) {
-      modalClose(modalBg);
-    }
-    if (modalSignIn.classList.contains('modal-opened')) {
-      modalClose(modalSignIn);
-    }
-    if (modalSignUp.classList.contains('modal-opened')) {
-      modalClose(modalSignUp);
-    }
-  }
-  // Passwords hiding
-  passwordInput.forEach(element => {
-    if (element.getAttribute('type') === 'text') {
-      element.setAttribute('type', 'password');
-    }
-    showPas.forEach(element => {
-      if (element.classList.contains('pas-showed')) {
-        element.classList.remove('pas-showed');
-        element.style.opacity = '1';
-      }
-    });
-  });
-});
 
 loginBtn.forEach(button => {
   button.onclick = function() {
@@ -159,6 +132,7 @@ showPas.forEach(element => {
   };
 });
 
+// Modal closing
 modalCloseBtn.forEach(button => {
   button.onclick = function() {
     modalToggle(modalBg);
@@ -185,4 +159,31 @@ modalCloseBtn.forEach(button => {
       });
     });
   };
+});
+
+document.addEventListener('keydown', function(e) {
+  let keyCode = e.keyCode;
+  if (keyCode === 27) {
+    if (modalBg.classList.contains('modal-opened')) {
+      modalClose(modalBg);
+    }
+    if (modalSignIn.classList.contains('modal-opened')) {
+      modalClose(modalSignIn);
+    }
+    if (modalSignUp.classList.contains('modal-opened')) {
+      modalClose(modalSignUp);
+    }
+  }
+  // Passwords hiding
+  passwordInput.forEach(element => {
+    if (element.getAttribute('type') === 'text') {
+      element.setAttribute('type', 'password');
+    }
+    showPas.forEach(element => {
+      if (element.classList.contains('pas-showed')) {
+        element.classList.remove('pas-showed');
+        element.style.opacity = '1';
+      }
+    });
+  });
 });
