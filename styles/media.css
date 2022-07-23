@@ -491,6 +491,10 @@
 
 @media (max-width: 560px) {
 
+  .section-title {
+    margin-bottom: 20px;
+  }
+
   .benefit-text p {
     text-align: justify;
   }
