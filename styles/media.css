@@ -518,6 +518,10 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .modal-signup .modal-check {
+    flex-direction: row;
+  }
   
   .forgot-password {
     margin-left: 0;
