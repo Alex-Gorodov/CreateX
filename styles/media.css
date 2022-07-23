@@ -1,3 +1,19 @@
+@media (max-width: 1190px) {
+  
+  .filters-wrapper {
+    max-width: 420px;
+    justify-content: space-between;
+  }
+
+  .filters-list {
+    display: none;
+  }
+
+  .select-course-filter {
+    display: block;
+  }
+}
+
 @media (max-width: 1100px) {
 
   .createx-logo + .header-navigation-list {
@@ -393,14 +409,10 @@
 @media (max-width: 840px) {
 
   .filters-wrapper {
-    grid-auto-flow: dense;
-    margin: 20px auto;
+    grid-auto-flow: row;
+    row-gap: 1rem;
+    margin: 0 auto;
     justify-content: center;
-    row-gap: 20px;
-  }
-
-  .search-form {
-    grid-row: 1 / 2;
   }
 
   .filters-list {

@@ -803,12 +803,26 @@ body {
   list-style-type: none;
 }
 
-.search-input {
-  padding-right: 45px !important;
-  background-image: url("../images/search.svg");
-  background-size: 16px 16px;
+.filter-item .button {
+  padding: 0 2rem;
+}
+
+.select-course-filter {
+  display: none;
+  color: var(--primary-color);
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("../images/sort-triangle.svg");
+  background-size: 12px 12px;
   background-position: 90% 50%;
   background-repeat: no-repeat;
+
+  padding: 12px 16px;
+  font-size: 16px;
+  line-height: 26px;
+
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
 }
 
 .courses-page-body .courses-list {
@@ -827,7 +841,6 @@ body {
   padding: 24px;
   padding-top: 260px;
   height: 440px;
-  width: 370px;
 
   background-size: 390px 240px;
   background-position: top;
@@ -1642,6 +1655,21 @@ body {
 
   content: "";
 }
+
+.search-input {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding-right: 45px;
+  background-image: url("../images/search.svg");
+  background-size: 16px 16px;
+  background-position: 90% 50%;
+  background-repeat: no-repeat;
+}
+
+.search-input::placeholder {
+  color: var(--primary-color);
+}
+
 /************************************************************************************************
 
                                   Footer styles
