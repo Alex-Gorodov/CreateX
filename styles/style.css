@@ -161,32 +161,32 @@ body {
   cursor: pointer;
 }
 
-.filled-btn {
+.primary-btn {
   background: var(--btn-gradient);
   color: var(--white);
 }
 
-.filled-btn:hover {
+.primary-btn:hover {
   box-shadow: 0px 0px 2px black;
 }
 
-.filled-btn:active {
+.primary-btn:active {
   box-shadow: inset 0px 0px 8px black;
 }
 
-.unfilled-btn {
+.secondary-btn {
   background: none;
   background-color: transparent;
   outline: solid 1px var(--primary-color);
   color: var(--primary-color);
 }
 
-.unfilled-btn:hover {
+.secondary-btn:hover {
   background: var(--btn-gradient);
   color: var(--white);
 }
 
-.unfilled-btn:active {
+.secondary-btn:active {
   box-shadow: inset 0px 0px 8px black;
 }
 
