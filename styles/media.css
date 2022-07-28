@@ -392,6 +392,7 @@
     border: solid 1px var(--primary-color);
     color: var(--primary-color);
     appearance: none;
+    -webkit-appearance: none;
 
     background-image: url("../images/sort-triangle.svg");
     background-size: 9px 16px;
