@@ -38,10 +38,6 @@ const parallax = elements => {
 
 parallax(parallaxElements);
 
-window.onscroll = () => {
-  parallax(parallaxElements);
-};
-
 // MODAL
 let loginBtn = document.querySelectorAll('.login-btn');
 let signInBtn = document.querySelector('.signin-btn');
@@ -221,7 +217,6 @@ window.onscroll = function()  {
       elem[i].classList.add("post-content-show");
     }
   }
-};
 
-// window.onscroll = function()  {
-// };
+  parallax(parallaxElements);
+};
