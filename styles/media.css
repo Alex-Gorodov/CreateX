@@ -536,6 +536,9 @@
     gap: 20px;
   }
 
+  .benefits-item-wrapper {
+    grid-template-columns: repeat(auto-fit, 260px);
+  }
 
   .footer-container {
     padding: 20px;

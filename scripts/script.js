@@ -187,3 +187,27 @@ document.addEventListener('keydown', function(e) {
     });
   });
 });
+
+
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+     change.target.classList.add('element-show');
+    }
+  });
+}
+
+let options = {
+  threshold: [0.25] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.section-container');
+
+for (let e of elements) {
+  observer.observe(e);
+}
+
+// let titles = document.querySelectorAll('.section-title');
+
+// for (let b of titles) {
+//   observer.observe(b);
+// }

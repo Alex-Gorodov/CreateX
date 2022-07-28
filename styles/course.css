@@ -44,6 +44,8 @@
 
 .about-course-section .section-container {
   align-items: start;
+  opacity: 0;
+  transform: translateY(40px);
 }
 
 .about-course-section .section-title {
@@ -170,6 +172,8 @@
   align-items: start;
   grid-template-columns: 1fr 1fr;
   column-gap: 4.5vw;
+  opacity: 0;
+  transform: translateY(40px);
 }
 
 .curator-image-wrapper {
