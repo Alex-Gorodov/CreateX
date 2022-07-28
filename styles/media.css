@@ -442,6 +442,32 @@
     flex-direction: column;
     justify-content: center;
   }
+
+  .blog-image-wrapper {
+    transform: translateX(-200%) scale(0.8);
+  }
+
+  .blog-image-wrapper-even {
+    transform: translateX(200%) scale(0.8);
+  }
+
+  .blog-image-show {
+    transform: translateX(0) scale(0.8);
+    transition: 0.6s;
+  }
+
+  .post-content {
+    transform: translateX(-200%);
+  }
+
+  .post-content-even {
+    transform: translateX(200%);
+  }
+
+  .post-content-show {
+    transform: translateX(0);
+    transition: 0.6s;
+  }
   
   .post-item:not(:last-child) {
     margin-right: 0;

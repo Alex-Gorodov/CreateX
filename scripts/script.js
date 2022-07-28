@@ -206,8 +206,22 @@ for (let e of elements) {
   observer.observe(e);
 }
 
-// let titles = document.querySelectorAll('.section-title');
+// post showing
 
-// for (let b of titles) {
-//   observer.observe(b);
-// }
+window.onscroll = function()  {
+  var image = document.getElementsByClassName("blog-image-wrapper");
+  for(let i=0;i<image.length;i++){
+    if(image[i].getBoundingClientRect().top <= 500){
+      image[i].classList.add("blog-image-show");
+    }
+  }
+  var elem = document.getElementsByClassName("post-content");
+  for(let i=0;i<elem.length;i++){
+    if(elem[i].getBoundingClientRect().top <= 500){
+      elem[i].classList.add("post-content-show");
+    }
+  }
+};
+
+// window.onscroll = function()  {
+// };
