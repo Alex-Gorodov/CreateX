@@ -207,7 +207,7 @@ for (let e of elements) {
 window.onscroll = function()  {
   var image = document.getElementsByClassName("blog-image-wrapper");
   for(let i=0;i<image.length;i++){
-    if(image[i].getBoundingClientRect().top <= 600){
+    if(image[i].getBoundingClientRect().top <= 500){
       image[i].classList.add("blog-image-show");
     }
   }
