@@ -207,13 +207,13 @@ for (let e of elements) {
 window.onscroll = function()  {
   var image = document.getElementsByClassName("blog-image-wrapper");
   for(let i=0;i<image.length;i++){
-    if(image[i].getBoundingClientRect().top <= 500){
+    if(image[i].getBoundingClientRect().top <= 600){
       image[i].classList.add("blog-image-show");
     }
   }
   var elem = document.getElementsByClassName("post-content");
   for(let i=0;i<elem.length;i++){
-    if(elem[i].getBoundingClientRect().top <= 500){
+    if(elem[i].getBoundingClientRect().top <= 600){
       elem[i].classList.add("post-content-show");
     }
   }
