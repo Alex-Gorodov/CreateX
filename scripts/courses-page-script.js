@@ -35,32 +35,22 @@ function handleClick(e) {
   }
 }
 
-// array for results
-// let result = [];
+function compare( a, b ) {
+  if ( a.type < b.type ){
+    return -1;
+  }
+  if ( a.type > b.type ){
+    return 1;
+  }
+  return 0;
+}
 
-// building array of results
-// for (let n = 0; n < coursesList.length; n++) {
-//   courseButtons[n].onclick = function () {
-    // for (let j = 0; j < coursesList.length; j++) {
-    //   if (!(courseButtons[n].textContent.substring(0, 5)).match(coursesList[j].type.substring(0, 5))) {
-    //     coursesList.slice(coursesList[j]);
-    //   } 
-    //   else {
-    //     result.push(coursesList[j]);
-    //     console.log(result);
-    //   }
-    // }
-    // coursesList = result;
-    function compare( a, b ) {
-      if ( a.type < b.type ){
-        return -1;
-      }
-      if ( a.type > b.type ){
-        return 1;
-      }
-      return 0;
+coursesList.sort( compare );
+
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+     change.target.classList.add('element-show');
     }
-    
-    coursesList.sort( compare );
-//   };
-// }
+  });
+}

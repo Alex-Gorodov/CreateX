@@ -62,7 +62,7 @@
 @media (max-width: 1020px) {
 
   .courses-page-body .page-header {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
 
   .course-info-wrapper {
@@ -457,17 +457,19 @@
     transition: 0.6s;
   }
 
-  .post-content {
+  .card {
     transform: translateX(-200%);
+    opacity: 0;
   }
 
-  .post-content-even {
+  .card-even {
     transform: translateX(200%);
   }
 
   .post-content-show {
     transform: translateX(0);
     transition: 0.6s;
+    opacity: 1;
   }
   
   .post-item:not(:last-child) {

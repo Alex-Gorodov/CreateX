@@ -22,6 +22,23 @@ function burgerToggle() {
   pageBody.classList.toggle('locked');
 }
 
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+     change.target.classList.add('element-show');
+    }
+  });
+}
+
+let options = {
+  threshold: [0.25] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.section-container');
+
+for (let e of elements) {
+  observer.observe(e);
+}
+
 // PARALLAX
 const parallaxElements = document.querySelectorAll('.parallax');
 
@@ -184,24 +201,6 @@ document.addEventListener('keydown', function(e) {
   });
 });
 
-
-function onEntry(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-     change.target.classList.add('element-show');
-    }
-  });
-}
-
-let options = {
-  threshold: [0.25] };
-let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll('.section-container');
-
-for (let e of elements) {
-  observer.observe(e);
-}
-
 // post showing
 
 window.onscroll = function()  {
@@ -211,7 +210,7 @@ window.onscroll = function()  {
       image[i].classList.add("blog-image-show");
     }
   }
-  var elem = document.getElementsByClassName("post-content");
+  var elem = document.getElementsByClassName("card");
   for(let i=0;i<elem.length;i++){
     if(elem[i].getBoundingClientRect().top <= 600){
       elem[i].classList.add("post-content-show");
