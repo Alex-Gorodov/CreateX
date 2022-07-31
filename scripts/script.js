@@ -33,7 +33,7 @@ function onEntry(entry) {
 let options = {
   threshold: [0.25] };
 let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll('.section-container');
+let elements = document.querySelectorAll('.floating-content');
 
 for (let e of elements) {
   observer.observe(e);
