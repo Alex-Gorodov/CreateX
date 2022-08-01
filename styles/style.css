@@ -859,6 +859,7 @@ body {
   padding: 24px;
   padding-top: 260px;
   width: 100%;
+  max-width: 90vw;
   height: 440px;
 
   background-size: 390px 240px;
