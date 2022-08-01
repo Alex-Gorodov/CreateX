@@ -931,7 +931,7 @@ body {
 }
 
 .list-load-more:hover::before {
-  transform: rotate(180deg);
+  transform: rotate(-360deg);
   transition: 0.4s;
 }
 
