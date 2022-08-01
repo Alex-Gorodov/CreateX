@@ -930,6 +930,11 @@ body {
   content: "";
 }
 
+.list-load-more:hover::before {
+  transform: rotate(180deg);
+  transition: 0.4s;
+}
+
 /********************************     Benefits-section      ********************************/
 
 .benefits-buttons-list {
