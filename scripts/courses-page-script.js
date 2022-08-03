@@ -34,25 +34,42 @@ for (let i = 0; i < coursesList.length; i++) {
   };
 }
 
-for (const element of courseButtons) {
-  let result = [];
-  courseButtons.forEach(element => {
-    element.onclick = function () {
-      let coursesCards = document.querySelectorAll(".course-card");
-      coursesCards.forEach(element => {
-        element.classList.remove('visually-hidden');
-      });
-      result = coursesList.filter(course => element.textContent.match(course.type));
-      for (let i = 0; i < coursesList.length; i++) {
-        for (let j = 0; j < result.length; j++) {            
-          if (!result.includes(coursesList[i])) {
-            coursesCards[i].classList.add('visually-hidden');
-          }
+courseButtons.forEach(element => {
+  element.onclick = function () {
+    let coursesCards = document.querySelectorAll(".course-card");
+    coursesCards.forEach(element => {
+      element.classList.remove('visually-hidden');
+    });
+    let result = coursesList.filter(course => element.textContent.match(course.type));
+    for (let i = 0; i < coursesList.length; i++) {
+      for (let j = 0; j < result.length; j++) {            
+        if (!result.includes(coursesList[i])) {
+          coursesCards[i].classList.add('visually-hidden');
         }
       }
-    };
-  });
-}
+    }
+  };
+});
+
+const courseSelect = document.querySelector('.select-course-filter');
+
+courseSelect.onchange = function () {
+    let selected = courseSelect.options[courseSelect.selectedIndex].textContent;
+    console.log(selected);
+    let coursesCards = document.querySelectorAll(".course-card");
+    coursesCards.forEach(element => {
+      element.classList.remove('visually-hidden');
+    });
+    let result = coursesList.filter(course => selected === (course.type));
+    for (let i = 0; i < coursesList.length; i++) {
+      for (let j = 0; j < result.length; j++) {            
+        if (!result.includes(coursesList[i])) {
+          coursesCards[i].classList.add('visually-hidden');
+        }
+      }
+    }
+  };
+
 
 // sections animation
 function onEntry(entry) {
