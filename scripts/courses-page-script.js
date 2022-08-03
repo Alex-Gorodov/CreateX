@@ -35,17 +35,19 @@ for (let i = 0; i < coursesList.length; i++) {
 }
 
 for (const element of courseButtons) {
+  let result = [];
   courseButtons.forEach(element => {
     element.onclick = function () {
-      let result = coursesList.filter(course =>
+      let coursesCards = document.querySelectorAll(".course-card");
+      coursesCards.forEach(element => {
+        element.classList.remove('visually-hidden');
+      });
+      result = coursesList.filter(course =>
         element.textContent.match(course.type));
         console.log(result);
         console.log(coursesList.length);
-        let count = 0;
         for (let i = 0; i < coursesList.length; i++) {
           for (let j = 0; j < result.length; j++) {            
-            let coursesCards = document.querySelectorAll(".course-card");
-            // if (coursesList[i] === result[j]) {
             if (!result.includes(coursesList[i])) {
               coursesCards[i].classList.add('visually-hidden');
             }
@@ -63,3 +65,4 @@ function onEntry(entry) {
     }
   });
 }
+
