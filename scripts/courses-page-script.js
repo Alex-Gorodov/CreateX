@@ -1,7 +1,7 @@
 // Course list filters toggler
 const coursesFilter = document.querySelector(".filters-list");
 const courseButtons = document.querySelectorAll(".filter-item .button");
-let coursesList = Array.from(document.querySelectorAll(".course-card"));
+const coursesList = Array.from(document.querySelectorAll(".course-card"));
 
 let courseType = document.querySelectorAll(".course-type-badge");
 let courseName = document.querySelectorAll(".course-name");
@@ -40,11 +40,19 @@ for (const element of courseButtons) {
       let result = coursesList.filter(course =>
         element.textContent.match(course.type));
         console.log(result);
-        // console.log(coursesList.length);
-        // coursesList = result;
-        // console.log(coursesList.length);
-    };
-  });
+        console.log(coursesList.length);
+        let count = 0;
+        for (let i = 0; i < coursesList.length; i++) {
+          for (let j = 0; j < result.length; j++) {            
+            let coursesCards = document.querySelectorAll(".course-card");
+            // if (coursesList[i] === result[j]) {
+            if (!result.includes(coursesList[i])) {
+              coursesCards[i].classList.add('visually-hidden');
+            }
+          } 
+        }
+      };
+    });
 }
 
 // sections animation

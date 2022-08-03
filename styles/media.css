@@ -148,6 +148,7 @@
 
   .courses-list {
     justify-items: center;
+    justify-content: center;
     max-width: 370px;
   }
   
