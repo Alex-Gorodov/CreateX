@@ -42,19 +42,16 @@ for (const element of courseButtons) {
       coursesCards.forEach(element => {
         element.classList.remove('visually-hidden');
       });
-      result = coursesList.filter(course =>
-        element.textContent.match(course.type));
-        console.log(result);
-        console.log(coursesList.length);
-        for (let i = 0; i < coursesList.length; i++) {
-          for (let j = 0; j < result.length; j++) {            
-            if (!result.includes(coursesList[i])) {
-              coursesCards[i].classList.add('visually-hidden');
-            }
-          } 
+      result = coursesList.filter(course => element.textContent.match(course.type));
+      for (let i = 0; i < coursesList.length; i++) {
+        for (let j = 0; j < result.length; j++) {            
+          if (!result.includes(coursesList[i])) {
+            coursesCards[i].classList.add('visually-hidden');
+          }
         }
-      };
-    });
+      }
+    };
+  });
 }
 
 // sections animation
