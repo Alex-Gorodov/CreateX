@@ -681,6 +681,7 @@ body {
   grid-column: span 2;
   gap: 30px;
   list-style-type: none;
+  justify-content: center;
 }
 
 .course-card {
